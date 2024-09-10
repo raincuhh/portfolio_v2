@@ -16,6 +16,7 @@
    },
    "dependencies": {
       "boxicons": "^2.0.1",
-      "gsap": "^3.12.5"
+      "gsap": "^3.12.5",
+      "nodemailer": "^6.9.15"
    }
 }
