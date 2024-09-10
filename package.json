@@ -1,0 +1,15 @@
+{
+   "name": "portfolio_v2",
+   "version": "1.0.0",
+   "description": "the 2nd edition of my portfolio",
+   "main": "src/pipeline.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+"
+   },
+   "author": "filip ryan",
+   "license": "MIT"
+}
