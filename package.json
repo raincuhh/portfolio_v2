@@ -1,15 +1,17 @@
 {
    "name": "portfolio_v2",
    "version": "1.0.0",
-   "description": "the 2nd edition of my portfolio",
+   "description": "The 2nd edition of my portfolio.",
    "main": "src/pipeline.js",
-   "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-   },
+   "scripts": {},
    "repository": {
       "type": "git",
-      "url": "git+"
+      "url": "git+https://github.com/raincuhh/portfolio_v2"
    },
    "author": "filip ryan",
-   "license": "MIT"
+   "license": "MIT",
+   "devDependencies": {
+      "tsc": "^2.0.4",
+      "typescript": "^5.6.2"
+   }
 }
