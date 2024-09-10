@@ -15,7 +15,7 @@ function set_el_text_content(el: HTMLElement, str: string) {
 }
 
 function set_page_title(str: string) {
-   document.title = str;
+   document.title = "filipryan.dev | " + str;
 }
 
 function uppercaseify_string(str: string) {
@@ -37,6 +37,7 @@ function uppercaseify(str: string) {
 
 export {
    get_id,
+   get_query,
    create_el,
    set_el_text_content,
    set_page_title,
