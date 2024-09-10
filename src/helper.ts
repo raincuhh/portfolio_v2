@@ -18,7 +18,7 @@ function set_page_title(str: string) {
    document.title = str;
 }
 
-function uppercaseifyString(str: string) {
+function uppercaseify_string(str: string) {
    let parts = str.split(" ");
    parts.forEach((part, index) => {
       parts[index] = uppercaseify(part);
@@ -35,7 +35,11 @@ function uppercaseify(str: string) {
    return str;
 }
 
-function loc(str: string) {
-   // localization stuff here
-   return str;
-}
+export {
+   get_id,
+   create_el,
+   set_el_text_content,
+   set_page_title,
+   uppercaseify,
+   uppercaseify_string,
+};

@@ -1,17 +1,10 @@
 {
    "compilerOptions": {
-      "target": "ES6",
-      "lib": ["dom", "dom.iterable", "esnext"],
-      "allowJs": true,
-      "skipLibCheck": true,
-      "allowSyntheticDefaultImports": true,
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "noFallthroughCasesInSwitch": true,
-      "module": "commonjs",
-      "outDir": "out",
-      "rootDir": "src"
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+      "target": "ES2023",
+      "sourceMap": true,
+      "outDir": "./out"
    },
-   "include": ["src/**/*"],
-   "exclude": ["node_modules"]
+   "include": ["src/**/*"]
 }
