@@ -1,14 +1,14 @@
 {
-  "name": "portfolio_v2",
-  "version": "1.0.0",
-  "description": "The 2nd edition of my portfolio.",
-  "main": "src/pipeline.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Filip Ryan",
-  "license": "MIT",
-  "dependencies": {
-    "typescript": "^5.6.2"
-  }
+   "name": "portfolio_v2",
+   "version": "1.0.0",
+   "description": "The 2nd edition of my portfolio.",
+   "main": "pipeline.js",
+   "scripts": {
+      "start": "tsc && node out/pipeline.js"
+   },
+   "author": "Filip Ryan",
+   "license": "MIT",
+   "dependencies": {
+      "typescript": "^5.6.2"
+   }
 }
