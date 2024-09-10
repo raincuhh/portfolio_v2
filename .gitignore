@@ -3,7 +3,7 @@
 .npm
 *.tsbuildinfo
 # Directories
-dist/           
+out/           
 node_modules/   
 # Env files      
 .env.           
