@@ -19,7 +19,7 @@
 
    --s-base-max-width: clamp(100rem, 12vw, 120rem);
    --s-preload-max-width: 37.4rem;
-   --s-max-width: clamp(50rem, 50vw, 70rem);
+   --s-max-width: clamp(50rem, 54vw, 62rem);
 
    /*viewport width
    --xs-width: 320px;

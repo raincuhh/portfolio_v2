@@ -63,6 +63,7 @@ summary {
    display: flex;
    color: var(--s-text-lower);
    padding-bottom: 2rem;
+   padding-top: clamp(15.7rem, 17vw, 30.7rem);
 }
 
 .preload_article {
@@ -83,6 +84,10 @@ summary {
 
 .preload_copyright {
    display: flex;
+}
+
+.preload_wip {
+   margin-top: auto;
 }
 
 .p {
@@ -165,4 +170,9 @@ summary {
 
 #contact {
    padding-bottom: 2.4rem;
+}
+
+#contact_cont {
+   display: flex;
+   flex-direction: column;
 }
