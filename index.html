@@ -3,115 +3,165 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>FilipRyan | home</title>
-
-      <link
-         rel="apple-touch-icon"
-         sizes="180x180"
-         href="assets/favicon/apple-touch-icon.png"
-      />
-      <link
-         rel="icon"
-         type="image/png"
-         sizes="32x32"
-         href="assets/favicon/favicon-32x32.png"
-      />
-      <link
-         rel="icon"
-         type="image/png"
-         sizes="16x16"
-         href="assets/favicon/favicon-16x16.png"
-      />
+      <title>filipryan.dev | home</title>
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
       <link rel="manifest" href="assets/favicon/site.webmanifest" />
-
-      <link
-         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-         rel="stylesheet"
-      />
-
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+      <script>
+         let date_opened = new Date();
+      </script>
+      <meta name="description" content="filip ryan 2nd edition portfolio." />
       <link rel="stylesheet" href="pages/fonts.css" />
       <link rel="stylesheet" href="pages/glob_layout.css" />
       <link rel="stylesheet" href="layout.css" />
    </head>
    <body>
-      <main class="layout" id="root">
-         <div class="container">
-            <section class="preload">
-               <div class="wrapper">
-                  <header class="title">
-                     <p class="name">Filip Ryan's Portfolio</p>
-                     <span class="tag">[<span>Dev</span>]</span>
-                     <p class="section_tag">[1]</p>
-                  </header>
-                  <article class="desc">
-                     <p>
-                        I am a 17-year-old IT student with a passion for
-                        programming and development. I strive to innovate and
-                        develop something new.
-                     </p>
-                     <p>
-                        Currently a student at Kirkeparken videregående skole,
-                        in my second year of computer science.
-                     </p>
-
-                     <hr />
-                  </article>
-
-                  <footer class="copyright">
-                     <p>
-                        @2024 - <span class="date">2024</span> filipryan.dev,
-                        All Rights Reserved.
-                     </p>
-                     <p class="section_tag">[2]</p>
-                  </footer>
+      <main class="page" id="root">
+         <div class="page_container">
+            <div>
+               <section id="preload">
+                  <div class="container">
+                     <div class="cont">
+                        <div class="in_cont" id="in_cont_preload">
+                           <div class="preload_title">
+                              <p class="preload_name">Filip Ryan's Portfolio</p>
+                              <span class="section_tag marg_auto_left">[1]</span>
+                           </div>
+                           <div class="preload_article">
+                              <p>
+                                 "An apple fell, from a Serpent's lies. The garden grew thorns where petals
+                                 had dried.”
+                              </p>
+                              <hr />
+                           </div>
+                           <div class="preload_copyright">
+                              <p>
+                                 <span class="copyright_date">©2024</span>
+                                 filipryan.dev. All Rights Reserved.
+                              </p>
+                              <p class="section_tag marg_auto_left">[2]</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+            <nav class="nav">
+               <div class="nav_wrapper p">
+                  <div class="nav_title">filip ryan©</div>
+                  <ul class="nav_list">
+                     <li class="nav_list_item">
+                        <a href="intro">intro</a>
+                     </li>
+                     <li class="nav_list_item">
+                        <a href="about">about</a>
+                     </li>
+                     <li class="nav_list_item">
+                        <a href="projects">projects</a>
+                     </li>
+                     <li class="nav_list_item">
+                        <a href="contact">contact</a>
+                     </li>
+                     <li class="nav_list_item">
+                        <button id="theme_switch">the sun</button>
+                     </li>
+                  </ul>
                </div>
-            </section>
-            <section class="hero">obscured by preload currently</section>
+            </nav>
+            <!-- 992px+ -->
+            <div class="scroll_nav">
+               <div class="scroll_nav_wrapper">
+                  <ul class="scroll_nav_list">
+                     <header class="scroll_nav_header">[contents]</header>
+                     <li class="scroll_nav_list_item">
+                        <a href="#intro">intro</a>
+                     </li>
+                     <li class="scroll_nav_list_item">
+                        <a href="#about">about</a>
+                     </li>
+                     <li class="scroll_nav_list_item">
+                        <a href="#projects">project</a>
+                     </li>
+                     <li class="scroll_nav_list_item">
+                        <a href="contact">contact</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div>
+               <section id="intro">
+                  <div class="container">
+                     <div class="cont">
+                        <div class="in_cont" id="in_cont_intro">
+                           <h1 class="intro_title">
+                              <p class="intro_title_text_line">
+                                 <strong>Portfolio.</strong>
+                              </p>
+                              <p class="intro_title_text_line">
+                                 <strong>Aspiring developer.</strong>
+                              </p>
+                              <p class="intro_title_text_line">17-year-old</p>
+                              <p class="intro_title_text_line">IT-student,</p>
+                              <p class="intro_title_text_line">striving to innovate</p>
+                              <p class="intro_title_text_line">and develop both</p>
+                              <p class="intro_title_text_line">
+                                 <strong>solutions</strong>
+                              </p>
+                              <p class="intro_title_text_line">to problems,</p>
+                              <p class="intro_title_text_line">and program</p>
+                              <p class="intro_title_text_line">
+                                 <strong>for fun.</strong>
+                              </p>
+                           </h1>
+                           <span class="section_tag marg_auto_left">[intro]</span>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+            <div>
+               <section id="about">
+                  <div class="container">
+                     <div class="cont" id="about_cont">
+                        <div class="in_cont" id="in_cont_about">
+                           <span class="section_tag marg_auto_left">[about]</span>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+            <div>
+               <section id="projects">
+                  <div class="container">
+                     <div class="cont" id="projects_cont">
+                        <div class="in_cont" id="in_cont_projects">
+                           <span class="section_tag marg_auto_left">[projects]</span>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+            <div>
+               <section id="contact">
+                  <div class="container">
+                     <div class="cont" id="contact_cont">
+                        <div class="in_cont" id="in_cont_contact">
+                           <span class="section_tag marg_auto_left">[contact]</span>
+                        </div>
+                        <div class="in_cont contact_copyright">
+                           <p>
+                              <span class="copyright_date">©2024</span>
+                              filipryan.dev. All Rights Reserved.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
          </div>
-
-         <!--
-            <section class="preload">
-               <div class="wrapper">
-                  <header class="preload_header">
-                     <div class="desc">
-                        <p class="preload_name">
-                           Filip Ryan
-                           <span class="bracket_span"
-                              >[Aspiring Developer]</span
-                           >
-                        </p>
-                     </div>
-                     <div class="inner_section_num">[1]</div>
-                  </header>
-                  <section class="preload_body">
-                     <div class="desc">
-                        <p>
-                           I am a 17-year-old IT student with a passion for
-                           programming and development, and striving to innovate
-                           in the programming scene.
-                        </p>
-                        <p>
-                           Currently a student at Kirkeparken
-                           <span class="bracket_span">[videregående skole]</span
-                           >, in my second year of computer science.
-                        </p>
-                     </div>
-                  </section>
-                  <footer class="preload_copyright">
-                     <div class="desc">
-                        <p>
-                           <span class="copyright_date">@2024 - 2024</span>
-                           filipryan.dev - All Rights Reserved.
-                        </p>
-                     </div>
-                     <div class="inner_section_num">[2]</div>
-                  </footer>
-               </div>
-            </section>
-            -->
       </main>
-
-      <!-- Src -->
       <script type="module" src="out/localization.js"></script>
       <script type="module" src="out/helper.js"></script>
       <script type="module" src="out/pipeline.js"></script>

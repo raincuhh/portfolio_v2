@@ -1,110 +1,168 @@
-.layout {
-   height: 100dvh;
-   width: 100%;
+body {
+   font-style: normal;
+   font-weight: 400;
+   color: var(--s-text-base);
+   font-size: 1.4rem;
+   overflow-x: hidden;
 }
 
-.layout .container {
+main {
+   margin: 0 auto;
+}
+
+body,
+main {
+   position: relative;
+}
+
+article,
+aside,
+details,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+   display: block;
+}
+
+[hidden] {
+   display: none;
+}
+
+.page {
+   background-color: var(--s-bg-color);
+}
+
+.page_container {
    display: flex;
    flex-direction: column;
    height: 100%;
+   overflow-y: hidden;
+}
+
+#preload {
+   position: absolute;
+   background-color: var(--s-bg-color);
+   z-index: var(--s-preload-z-idx);
+   height: 100dvh;
+   width: 100%;
+   padding-bottom: 2.4rem;
+}
+
+#in_cont_preload {
+   display: flex;
+   flex-direction: column;
    justify-content: center;
-
-   .preload {
-      position: fixed;
-      display: flex;
-      justify-content: center;
-      max-width: var(--preload-width-max);
-      background-color: var(--bg-color);
-   }
-
-   .preload .wrapper {
-      display: flex;
-      flex-direction: column;
-   }
-
-   .preload .wrapper .title {
-      display: flex;
-   }
-
-   .preload .wrapper .title .name {
-      color: var(--text-highlight);
-   }
-
-   .preload .wrapper .title .tag {
-      padding-left: 0.5rem;
-   }
-
-   .preload .wrapper .title .tag span {
-      font-weight: bold;
-   }
-
-   .preload .wrapper .title .section_tag {
-      margin-left: auto;
-   }
-
-   .preload .wrapper .desc {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      padding-top: 1rem;
-   }
-
-   .preload .wrapper .desc hr {
-      margin-top: 2rem;
-      height: 0.1px;
-      background-color: var(--hr-base);
-   }
-
-   .preload .wrapper .copyright {
-      padding-top: 5rem;
-      display: flex;
-   }
-
-   .preload .wrapper .copyright .section_tag {
-      margin-left: auto;
-   }
 }
 
-/*
-#root .layout {
-   .preload {
-      height: 100%;
-   }
-
-   .preload .wrapper {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      padding: clamp(5rem, 2.4vw, 7rem) var(--padding-base-1) 0;
-   }
-
-   .preload .wrapper .preload_header {
-      display: flex;
-      justify-content: space-between;
-   }
-
-   .preload .wrapper .preload_header .desc {
-      display: flex;
-      gap: 0.25rem;
-   }
-
-   .preload .wrapper .preload_body {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 1rem;
-   }
-
-   .preload .wrapper .preload_body .desc {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-   }
-
-   .preload .wrapper .preload_copyright {
-      display: flex;
-      justify-content: space-between;
-      margin-top: auto;
-      margin-bottom: 2rem;
-   }
+.preload_title {
+   display: flex;
+   color: var(--s-text-lower);
+   padding-bottom: 2rem;
 }
-*/
+
+.preload_article {
+   display: flex;
+   flex-direction: column;
+}
+
+.preload_article p {
+   padding-bottom: 2rem;
+}
+
+.preload_article hr {
+   height: 1px;
+   background-color: black;
+   width: 100%;
+   margin-bottom: 4rem;
+}
+
+.preload_copyright {
+   display: flex;
+}
+
+.p {
+   font-size: 1.4rem;
+   line-height: 1.4;
+}
+
+.nav {
+   position: absolute;
+   top: 3.7rem;
+   left: 1.8rem;
+   z-index: var(--s-nav-z-idx);
+}
+
+.nav_wrapper {
+   display: flex;
+   flex-direction: column;
+}
+
+.nav_title {
+   color: var(--s-text-lower);
+   text-decoration: underline;
+}
+
+.nav_list {
+   display: none;
+}
+
+.nav_list_item > * {
+   text-decoration: none;
+   font-size: 1.4rem;
+   color: var(--s-text-lower);
+   text-decoration: underline;
+}
+
+.scroll_nav {
+   position: absolute;
+   top: 3.7rem;
+   right: 1.8rem;
+   display: none;
+   z-index: var(--s-scroll-nav-z-idx);
+}
+
+.container {
+   margin: 0 auto;
+   max-width: var(--s-max-width);
+   padding: 0 1.8rem;
+   height: 100%;
+}
+
+.cont {
+   margin: 0 -0.2rem;
+   height: 100%;
+   display: flex;
+}
+
+.in_cont {
+   display: flex;
+   padding: 0 0.2rem;
+   flex-grow: 1;
+   min-height: 0.1rem;
+}
+
+.section_tag {
+   font-size: 1rem;
+}
+
+.marg_auto_left {
+   margin-left: auto;
+}
+
+.marg_auto_right {
+   margin-right: auto;
+}
+
+.intro_title,
+#intro .container .cont .in_cont .section_tag {
+   padding-top: 7.7rem;
+}
+
+#contact {
+   padding-bottom: 2.4rem;
+}

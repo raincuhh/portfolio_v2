@@ -11,7 +11,10 @@ window.onload = function () {
          console.log("ERROR, Failed initializing pipeline");
       }
 
-      console.log("hello world!");
+      console.log(
+         "%cMade by yours truly (filip ryan).",
+         "background-color: #ffffff; color: #000000; font-size: 12px; padding: 8px 10px 6px; border-radius: 4px"
+      );
 
       p_line.pipeline_init();
    } else {

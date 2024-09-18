@@ -11,33 +11,26 @@
 }
 
 :root {
-   --bg-color: rgb(255, 255, 255);
-   --text-base: rgb(62, 61, 65);
-   --text-highlight: rgb(1, 1, 1);
+   --s-bg-color: rgb(255, 255, 255);
+   --s-text-base: rgb(62, 61, 65);
+   --s-text-lower: rgb(1, 1, 1);
+   --s-hr-base: rgb(217, 217, 217);
+   --s-transition-hover-base: all ease-in-out 100ms;
 
-   --hr-base: rgb(217, 217, 217);
+   --s-base-max-width: clamp(100rem, 12vw, 120rem);
+   --s-preload-max-width: 37.4rem;
+   --s-max-width: clamp(50rem, 50vw, 70rem);
 
-   --height-100: 100%;
-   --height-50: 50%;
-
-   --transition-hover-base: all ease-in-out 100ms;
-
-   --max-content-width-base: clamp(100rem, 12vw, 120rem);
-
-   --padding-base-1: max(1rem, clamp(1.5rem, 3vw, 10rem));
-
-   --preload-width-max: 35.4rem;
-   --site-width-max: clamp(50rem, 20vw, 60rem);
-
-   /*maxes*/
-
-   --max-sm-width: clamp(400px, 2vw, 600px);
-
-   /*viewport width*/
+   /*viewport width
    --xs-width: 320px;
    --sm-width: 576px;
    --md-width: 768px;
    --lg-width: 992px;
    --xl-width: 1200px;
    --xxl-width: 1440px;
+   */
+
+   --s-preload-z-idx: 4000;
+   --s-nav-z-idx: 2048;
+   --s-scroll-nav-z-idx: 2047;
 }
