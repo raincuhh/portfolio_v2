@@ -95,16 +95,20 @@ summary {
    line-height: 1.4;
 }
 
-.nav {
-   position: absolute;
+#nav {
+   position: fixed;
    top: 3.7rem;
-   left: 1.8rem;
    z-index: var(--s-nav-z-idx);
+   width: 100%;
 }
 
 .nav_wrapper {
    display: flex;
    flex-direction: column;
+   margin: 0 auto;
+   max-width: var(--s-max-width);
+   padding: 0 1.8rem;
+   height: 100%;
 }
 
 .nav_title {
@@ -123,7 +127,7 @@ summary {
    text-decoration: underline;
 }
 
-.scroll_nav {
+#scroll_nav {
    position: absolute;
    top: 3.7rem;
    right: 1.8rem;
@@ -168,6 +172,10 @@ summary {
    padding-top: 7.7rem;
 }
 
+#intro {
+   min-height: 100dvh;
+}
+
 #contact {
    padding-bottom: 2.4rem;
 }
@@ -175,4 +183,10 @@ summary {
 #contact_cont {
    display: flex;
    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+   .scroll_nav {
+      display: block;
+   }
 }

@@ -13,6 +13,7 @@
 :root {
    --s-bg-color: rgb(255, 255, 255);
    --s-text-base: rgb(62, 61, 65);
+   --s-text-highlight: rgb(137, 137, 137);
    --s-text-lower: rgb(1, 1, 1);
    --s-hr-base: rgb(217, 217, 217);
    --s-transition-hover-base: all ease-in-out 100ms;
@@ -25,9 +26,9 @@
    --xs-width: 320px;
    --sm-width: 576px;
    --md-width: 768px;
-   --lg-width: 992px;
-   --xl-width: 1200px;
-   --xxl-width: 1440px;
+   --lg-width: 1024px;
+   --xl-width: 1440px;
+   --xxl-width: 2560px;
    */
 
    --s-preload-z-idx: 4000;

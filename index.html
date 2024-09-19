@@ -35,7 +35,7 @@
          let year = date_now.getFullYear();
 
          const formatted = week_day_fm(week_day_unfm) + " " + day_int + " " + month + " " + year;
-         console.log("date now: " + formatted);
+         console.log("Date now: " + formatted);
       </script>
       <meta name="description" content="filip ryan 2nd edition portfolio." />
       <link rel="stylesheet" href="pages/fonts.css" />
@@ -78,7 +78,7 @@
                   </div>
                </section>
             </div>
-            <nav class="nav">
+            <nav id="nav">
                <div class="nav_wrapper p">
                   <div class="nav_title">filip ryan©</div>
                   <ul class="nav_list">
@@ -101,7 +101,7 @@
                </div>
             </nav>
             <!-- 992px+ -->
-            <nav class="scroll_nav">
+            <nav id="scroll_nav">
                <div class="scroll_nav_wrapper">
                   <ul class="scroll_nav_list">
                      <header class="scroll_nav_header">[contents]</header>
@@ -194,6 +194,7 @@
          </div>
       </main>
       <script type="module" src="out/localization.js"></script>
+      <script type="module" src="out/translation.js"></script>
       <script type="module" src="out/helper.js"></script>
       <script type="module" src="out/pipeline.js"></script>
       <script type="module" src="out/onload.js"></script>
