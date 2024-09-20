@@ -172,21 +172,34 @@ summary {
    padding-top: 7.7rem;
 }
 
-#intro {
-   min-height: 100dvh;
+.intro_title {
+   display: flex;
+   flex-direction: column;
+}
+
+.intro_title_text_line {
+   font-size: clamp(1.6rem, 6.4vw, 2rem);
+   line-height: clamp(2rem, 6.4vw, 2.4rem);
 }
 
 #contact {
    padding-bottom: 2.4rem;
 }
 
-#contact_cont {
+.contact_content {
    display: flex;
    flex-direction: column;
 }
 
+@media (min-width: 768px) {
+   .intro_title_text_line {
+      font-size: clamp(4rem, 12.4vw, 6rem);
+      line-height: clamp(2.4rem, 12.4vw, 6rem);
+   }
+}
+
 @media (min-width: 992px) {
-   .scroll_nav {
+   #scroll_nav {
       display: block;
    }
 }

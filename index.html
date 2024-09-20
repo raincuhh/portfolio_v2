@@ -4,10 +4,10 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>filipryan.dev | home</title>
-      <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
-      <link rel="manifest" href="assets/favicon/site.webmanifest" />
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_2/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_2/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_2/favicon-16x16.png" />
+      <link rel="manifest" href="assets/favicon_2/site.webmanifest" />
       <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
       <script>
          let date_now = new Date();
@@ -28,13 +28,15 @@
                   return "Sat";
                case 7:
                   return "Sun";
+               default:
+                  return "Unknown";
             }
          };
-         let day_int = date_now.getDate();
+         let date = date_now.getDate();
          let month = date_now.getMonth();
          let year = date_now.getFullYear();
 
-         const formatted = week_day_fm(week_day_unfm) + " " + day_int + " " + month + " " + year;
+         const formatted = week_day_fm(week_day_unfm) + " " + date + " " + month + " " + year;
          console.log("Date now: " + formatted);
       </script>
       <meta name="description" content="filip ryan 2nd edition portfolio." />
@@ -100,7 +102,6 @@
                   </ul>
                </div>
             </nav>
-            <!-- 992px+ -->
             <nav id="scroll_nav">
                <div class="scroll_nav_wrapper">
                   <ul class="scroll_nav_list">
@@ -125,25 +126,27 @@
                   <div class="container">
                      <div class="cont">
                         <div class="in_cont" id="in_cont_intro">
-                           <article class="intro_title">
-                              <p class="intro_title_text_line">
-                                 <strong>Portfolio.</strong>
-                              </p>
-                              <p class="intro_title_text_line">
-                                 <strong>Aspiring developer.</strong>
-                              </p>
-                              <p class="intro_title_text_line">17-year-old</p>
-                              <p class="intro_title_text_line">IT-student,</p>
-                              <p class="intro_title_text_line">striving to innovate</p>
-                              <p class="intro_title_text_line">and develop both</p>
-                              <p class="intro_title_text_line">
-                                 <strong>solutions</strong>
-                              </p>
-                              <p class="intro_title_text_line">to problems,</p>
-                              <p class="intro_title_text_line">and program</p>
-                              <p class="intro_title_text_line">
-                                 <strong>for fun.</strong>
-                              </p>
+                           <article class="intro_cont">
+                              <header class="intro_title">
+                                 <p class="intro_title_text_line">
+                                    <strong>Portfolio.</strong>
+                                 </p>
+                                 <p class="intro_title_text_line">
+                                    <strong>Aspiring developer.</strong>
+                                 </p>
+                                 <p class="intro_title_text_line">17-year-old</p>
+                                 <p class="intro_title_text_line">IT-student,</p>
+                                 <p class="intro_title_text_line">striving to innovate</p>
+                                 <p class="intro_title_text_line">and develop both</p>
+                                 <p class="intro_title_text_line">
+                                    <strong>solutions</strong>
+                                 </p>
+                                 <p class="intro_title_text_line">to problems,</p>
+                                 <p class="intro_title_text_line">and program</p>
+                                 <p class="intro_title_text_line">
+                                    <strong>for fun.</strong>
+                                 </p>
+                              </header>
                            </article>
                            <span class="section_tag marg_auto_left">[intro]</span>
                         </div>
@@ -154,9 +157,11 @@
             <div>
                <section id="about">
                   <div class="container">
-                     <div class="cont" id="about_cont">
+                     <div class="cont">
                         <div class="in_cont" id="in_cont_about">
-                           placeholder
+                           <article class="about_cont">
+                              <header class="about_title"></header>
+                           </article>
                            <span class="section_tag marg_auto_left">[about]</span>
                         </div>
                      </div>
@@ -166,9 +171,11 @@
             <div>
                <section id="projects">
                   <div class="container">
-                     <div class="cont" id="projects_cont">
+                     <div class="cont">
                         <div class="in_cont" id="in_cont_projects">
-                           placeholder
+                           <article class="projects_cont">
+                              <header class="projects_title"></header>
+                           </article>
                            <span class="section_tag marg_auto_left">[projects]</span>
                         </div>
                      </div>
@@ -178,16 +185,19 @@
             <div>
                <section id="contact">
                   <div class="container">
-                     <div class="cont" id="contact_cont">
+                     <div class="cont">
                         <div class="in_cont" id="in_cont_contact">
-                           placeholder
+                           <article class="contact_cont">
+                              <header class="contact_title"></header>
+                              <div class="contact_connect"></div>
+                              <div class="contact_copyright">
+                                 <p>
+                                    <span class="copyright_date">©2024</span>
+                                    filipryan.dev. All Rights Reserved.
+                                 </p>
+                              </div>
+                           </article>
                            <span class="section_tag marg_auto_left">[contact]</span>
-                        </div>
-                        <div class="in_cont contact_copyright">
-                           <p>
-                              <span class="copyright_date">©2024</span>
-                              filipryan.dev. All Rights Reserved.
-                           </p>
                         </div>
                      </div>
                   </div>
