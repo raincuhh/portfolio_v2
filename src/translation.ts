@@ -34,10 +34,10 @@ function add_translation() {
 
       for (let i = 0; i < children.length; i++) {
          const el: Element | null = children[i];
-         let item: HTMLAnchorElement | null = el.querySelector("a");
+         let item: HTMLAnchorElement | null = el.querySelector("a p, button p");
          if (!item) return;
          loc(item.textContent);
-         //console.log("item found");
+         console.log("item found");
       }
    }
 

@@ -12,9 +12,9 @@
 
 :root {
    --s-bg-color: rgb(255, 255, 255);
-   --s-text-base: rgb(62, 61, 65);
-   --s-text-highlight: rgb(137, 137, 137);
-   --s-text-lower: rgb(1, 1, 1);
+   --s-text-base: rgb(190, 188, 197);
+   --s-text-highlight: rgb(232, 232, 232);
+   --s-text-lower: rgb(0, 0, 0);
    --s-hr-base: rgb(217, 217, 217);
    --s-transition-hover-base: all ease-in-out 100ms;
 

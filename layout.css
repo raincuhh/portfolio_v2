@@ -97,7 +97,7 @@ summary {
 
 #nav {
    position: fixed;
-   top: 3.7rem;
+   top: clamp(3.7rem, 6.4vw, 4.7rem);
    z-index: var(--s-nav-z-idx);
    width: 100%;
 }
@@ -120,11 +120,19 @@ summary {
    display: none;
 }
 
+.nav_list_item {
+   width: min-content;
+}
+
 .nav_list_item > * {
    text-decoration: none;
-   font-size: 1.4rem;
-   color: var(--s-text-lower);
-   text-decoration: underline;
+   font-size: 1rem;
+   color: var(--s-text-base);
+}
+
+#theme_switch {
+   display: flex;
+   width: max-content;
 }
 
 #scroll_nav {
@@ -146,6 +154,7 @@ summary {
    margin: 0 -0.2rem;
    height: 100%;
    display: flex;
+   flex-direction: column;
 }
 
 .in_cont {
@@ -157,6 +166,15 @@ summary {
 
 .section_tag {
    font-size: 1rem;
+}
+
+.section_seperator {
+   height: 0.1px;
+
+   margin: clamp(2rem, 6.4vw, 4rem) 0;
+
+   padding: 0 0.2rem;
+   background-color: var(--s-hr-base);
 }
 
 .marg_auto_left {
@@ -177,9 +195,16 @@ summary {
    flex-direction: column;
 }
 
+.intro_title_strong {
+   color: var(--s-text-lower);
+   /*color: var(--s-text-lower);
+   */
+}
+
 .intro_title_text_line {
    font-size: clamp(1.6rem, 6.4vw, 2rem);
    line-height: clamp(2rem, 6.4vw, 2.4rem);
+   font-weight: 600;
 }
 
 #contact {
@@ -193,7 +218,7 @@ summary {
 
 @media (min-width: 768px) {
    .intro_title_text_line {
-      font-size: clamp(4rem, 12.4vw, 6rem);
+      font-size: clamp(4.4rem, 5.6vw, 6.7rem);
       line-height: clamp(2.4rem, 12.4vw, 6rem);
    }
 }
