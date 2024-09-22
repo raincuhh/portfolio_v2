@@ -12,7 +12,7 @@
 
 :root {
    --s-bg-color: rgb(255, 255, 255);
-   --s-text-base: rgb(190, 188, 197);
+   --s-text-base: rgb(168, 167, 167);
    --s-text-highlight: rgb(232, 232, 232);
    --s-text-lower: rgb(0, 0, 0);
    --s-hr-base: rgb(217, 217, 217);
@@ -21,6 +21,8 @@
    --s-base-max-width: clamp(100rem, 12vw, 120rem);
    --s-preload-max-width: 37.4rem;
    --s-max-width: clamp(50rem, 54vw, 62rem);
+
+   --s-nav-font-size: clamp(1.2rem, 6.4vw, 1.4rem);
 
    /*viewport width
    --xs-width: 320px;

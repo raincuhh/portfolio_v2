@@ -37,7 +37,6 @@ function add_translation() {
          let item: HTMLAnchorElement | null = el.querySelector("a p, button p");
          if (!item) return;
          loc(item.textContent);
-         console.log("item found");
       }
    }
 
