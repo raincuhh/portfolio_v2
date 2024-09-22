@@ -2,6 +2,7 @@ import { loc } from "./localization.js";
 import { get_id, get_query, create_el, set_el_text_content, set_page_title } from "./helper.js";
 
 // nav
+/*
 let nav_visiblity: boolean = false;
 
 let nav_title: Element | null = get_query("#nav .nav_wrapper .nav_title");
@@ -42,3 +43,4 @@ function check_resize_on_nav_list() {
       nav_list.setAttribute("style", "display: none");
    }
 }
+*/
