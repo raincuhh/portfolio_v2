@@ -1,18 +1,37 @@
+enum Languages {
+   English = 0,
+   Norwegian,
+}
+
 const translations: {
    [key: string]: {
       [key in Languages]: string;
    };
-} = {};
+} = {
+   "contact me at": {
+      [Languages.English]: "contact me at",
+      [Languages.Norwegian]: "",
+   },
+   "change the theme": {
+      [Languages.English]: "change the theme",
+      [Languages.Norwegian]: "bytt tema",
+   },
+   black: {
+      [Languages.English]: "black",
+      [Languages.Norwegian]: "svart",
+   },
+   white: {
+      [Languages.English]: "white",
+      [Languages.Norwegian]: "hvit",
+   },
+};
 
-enum Languages {
-   English,
-   Norwegian,
-}
-
-function loc(str: string, lang: Languages) {
+function loc(str: string | null, lang: Languages): string {
    if (!str) return "";
    const translation = translations[str];
-   // localization not implemented
+   if (translation) {
+      return translation[lang] || str;
+   }
    return str;
 }
 

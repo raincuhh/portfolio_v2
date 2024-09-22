@@ -37,6 +37,7 @@
          let year = date_now.getFullYear();
 
          const formatted = week_day_fm(week_day_unfm) + " " + date + " " + month + " " + year;
+         console.log(week_day_unfm); // test
          console.log("Date now: " + formatted);
       </script>
       <meta name="description" content="filip ryan 2nd edition portfolio." />
@@ -82,33 +83,36 @@
             </div>
             <nav id="nav">
                <div class="nav_wrapper">
-                  <!-- filip ryan 2024©-->
-                  <div class="nav_title">
-                     <p class="nav_title_first_name">filip</p>
-                     <div class="nav_title_last_name">
-                        <p class="nav_title_copyright">
+                  <div class="nav_header">
+                     <p class="nav_header_name_first">filip</p>
+                     <div class="nav_header_info">
+                        <p class="nav_header_copyright">
                            ©
-                           <span class="nav_title_copyright_year">2024</span>
+                           <span class="nav_header_copyright_year">2024</span>
                         </p>
-                        <p class="nav_title_l">ryan</p>
+                        <p class="nav_header_name_last">ryan</p>
                      </div>
                   </div>
-                  <div class="nav_more">
-                     <ul class="nav_more_list">
-                        <li class="nav_more_list_cat">
-                           <p id="nav_more_list_header_contact">contact me at</p>
-                           <a href="mailto:filipryanbusinessmail@gmail.com">
-                              <span>filipryanbusinessmail@gmail.com</span>
+                  <div class="nav_menu">
+                     <ul class="nav_menu_list">
+                        <li class="nav_menu_item" id="nav_menu_item_contact">
+                           <p class="nav_menu_item_header" id="nav_menu_header_contact">contact me at</p>
+                           <a href="mailto:filipryan.business@gmail.com">
+                              <span>filipryan.business@...</span>
                            </a>
                         </li>
-                        <li class="nav_more_list_cat">
-                           <p id="nav_more_list_cat_theme">change the theme</p>
-                           <p id="theme_changer">white</p>
+                        <li class="nav_menu_item" id="nav_menu_item_theme">
+                           <p class="nav_menu_item_header" id="nav_menu_header_theme">change the theme</p>
+                           <div class="theme_change">
+                              <div class="theme_change_first">black</div>
+                              <div class="theme_change_last">white</div>
+                           </div>
                         </li>
-                        <li class="nav_more_list_cat">
-                           <p id="nav_more_list_cat_lang">switch language</p>
-                           <ul class="nav_more_list_cat_lang_list">
-                              <li class="nav_more_list_cat_lang_list_item">english</li>
+                        <li class="nav_menu_item" id="nav_menu_item_lang">
+                           <p class="nav_menu_item_header" id="nav_menu_header_lang">switch language</p>
+                           <ul class="nav_menu_lang_list">
+                              <li class="nav_menu_lang_item">english</li>
+                              <li class="nav_menu_lang_item">norsk</li>
                            </ul>
                         </li>
                      </ul>
@@ -119,16 +123,16 @@
                <div class="scroll_nav_wrapper">
                   <ul class="scroll_nav_list">
                      <header class="scroll_nav_header">[table of contents]</header>
-                     <li class="scroll_nav_list_item">
+                     <li class="scroll_nav_item">
                         <a href="#intro">intro</a>
                      </li>
-                     <li class="scroll_nav_list_item">
+                     <li class="scroll_nav_item">
                         <a href="#about">about</a>
                      </li>
-                     <li class="scroll_nav_list_item">
+                     <li class="scroll_nav_item">
                         <a href="#projects">project</a>
                      </li>
-                     <li class="scroll_nav_list_item">
+                     <li class="scroll_nav_item">
                         <a href="contact">contact</a>
                      </li>
                   </ul>
@@ -270,7 +274,6 @@
       <script type="module" src="out/translation.js"></script>
       <script type="module" src="out/helper.js"></script>
       <script type="module" src="out/main.js"></script>
-      <script type="module" src="out/pipeline.js"></script>
       <script type="module" src="out/onload.js"></script>
    </body>
 </html>

@@ -86,3 +86,5 @@ function change_lang(lang: Languages = Languages.English) {
 
    // contact
 }
+
+export { change_lang };
