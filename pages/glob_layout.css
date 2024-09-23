@@ -23,6 +23,7 @@
    --s-max-width: clamp(50rem, 54vw, 62rem);
 
    --s-nav-font-size: clamp(1.2rem, 6.4vw, 1.4rem);
+   --s-nav-elements-top: clamp(3.4rem, 5.4vw, 4.4rem);
 
    /*viewport width
    --xs-width: 320px;

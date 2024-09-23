@@ -90,14 +90,9 @@ summary {
    margin-top: auto;
 }
 
-.p {
-   font-size: 1.4rem;
-   line-height: 1.4;
-}
-
 #nav {
    position: fixed;
-   top: clamp(3.7rem, 6.4vw, 4.7rem);
+   top: var(--s-nav-elements-top);
    z-index: var(--s-nav-z-idx);
    width: 100%;
 }
@@ -114,6 +109,7 @@ summary {
 .nav_header {
    display: flex;
    gap: 0.5rem;
+   cursor: pointer;
 }
 
 .nav_header_name_first {
@@ -140,12 +136,28 @@ summary {
 }
 
 .nav_menu_item_header {
+   color: var(--s-text-base);
+   cursor: pointer;
+}
+
+.nav_menu_item_cont a {
+   text-decoration: underline;
    color: var(--s-text-lower);
 }
 
+.nav_menu_item_cont p {
+   color: var(--s-text-lower);
+}
+
+.nav_menu_item_cont p:hover,
+.nav_menu_item_cont a:hover {
+   color: var(--s-text-base);
+   text-decoration: underline;
+}
+
 #scroll_nav {
-   position: absolute;
-   top: 3.7rem;
+   position: fixed;
+   top: var(--s-nav-elements-top);
    right: 1.8rem;
    display: none;
    z-index: var(--s-scroll-nav-z-idx);
@@ -179,7 +191,7 @@ summary {
 .section_seperator {
    height: 0.1px;
 
-   margin: clamp(2rem, 6.4vw, 4rem) 0;
+   margin: clamp(2rem, 8.4vw, 4rem) 0;
 
    padding: 0 0.2rem;
    background-color: var(--s-hr-base);
@@ -195,24 +207,22 @@ summary {
 
 .intro_title,
 #intro .container .cont .in_cont .section_tag {
-   padding-top: 8.4rem;
+   margin-top: clamp(9.6rem, 8.4vw, 10.6rem);
 }
 
 .intro_title {
    display: flex;
    flex-direction: column;
-   gap: clamp(0.2rem, 0.4vw, 0.5rem);
+   gap: clamp(0.2rem, 0.4vw, 0.4rem);
 }
 
 .intro_title_strong {
    color: var(--s-text-lower);
-   /*color: var(--s-text-lower);
-   */
 }
 
 .intro_title_text_line {
-   font-size: clamp(2rem, 8.4vw, 3rem);
-   line-height: clamp(2rem, 8.4vw, 3rem);
+   font-size: clamp(2rem, 8.4vw, 4rem);
+   line-height: clamp(2rem, 8.4vw, 4rem);
    font-weight: 600;
 }
 
@@ -231,13 +241,21 @@ summary {
 
 @media (min-width: 768px) {
    .intro_title_text_line {
-      font-size: clamp(4.4rem, 4vw, 6.8rem);
-      line-height: clamp(4.4rem, 4vw, 6.8rem);
+      font-size: clamp(4.4rem, 5.4vw, 6.8rem);
+      line-height: clamp(4.4rem, 5.4vw, 6.8rem);
+   }
+   .intro_title,
+   #intro .container .cont .in_cont .section_tag {
+      margin-top: clamp(10.6rem, 5.4vw, 12.6rem);
    }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
    #scroll_nav {
       display: block;
+   }
+   .intro_title_text_line {
+      font-size: clamp(5.4rem, 5vw, 6.8rem);
+      line-height: clamp(5.4rem, 5vw, 6.8rem);
    }
 }

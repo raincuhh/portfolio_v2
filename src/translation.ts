@@ -26,7 +26,9 @@ function change_lang(lang: Languages = Languages.English) {
    if (preload_wip) loc(preload_wip.textContent, lang);
 
    // nav
-   let nav_header_name_first: Element | null = get_query("#nav .nav_wrapper .nav_header_name_first");
+   let nav_header_name_first: Element | null = get_query(
+      "#nav .nav_wrapper .nav_header .nav_header_name_first"
+   );
    if (nav_header_name_first) loc(nav_header_name_first.textContent, lang);
 
    let nav_header_name_last: Element | null = get_query(
