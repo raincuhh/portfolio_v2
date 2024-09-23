@@ -79,6 +79,8 @@ function set_default_lang() {
    change_lang(Languages.English);
 }
 
+function set_copyright_year() {}
+
 function main() {
    set_default_nav_menu_visiblity();
    set_default_lang();
