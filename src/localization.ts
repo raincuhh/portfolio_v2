@@ -12,7 +12,7 @@ const translations: {
 } = {
    "contact me at": {
       [Languages.English]: "contact me at",
-      [Languages.Norwegian]: "",
+      [Languages.Norwegian]: "kontakt meg hos",
    },
    "change the theme": {
       [Languages.English]: "change the theme",
@@ -91,6 +91,7 @@ function change_lang(lang: Languages = Languages.English) {
    }
 
    // scroll nav
+   /*
    let scroll_nav_header: Element | null = get_query(
       "#scroll_nav .scroll_nav_wrapper .scroll_nav_list ._scroll_nav_header"
    );
@@ -108,6 +109,7 @@ function change_lang(lang: Languages = Languages.English) {
          loc(item.textContent, lang);
       }
    }
+   */
 
    // intro
    let intro_title_text_line_list = get_query("#in_cont_intro");
