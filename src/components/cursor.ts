@@ -11,8 +11,9 @@ function add_cursor() {
             top: `${pos_y}px`,
          },
          {
-            duration: 320,
+            duration: 520,
             fill: "forwards",
+            easing: "cubic-bezier(0.25, 0.1, 0.25, 1)",
          }
       );
    });

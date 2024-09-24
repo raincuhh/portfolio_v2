@@ -20,7 +20,8 @@
 
    --s-base-max-width: clamp(100rem, 12vw, 120rem);
    --s-preload-max-width: 37.4rem;
-   --s-max-width: clamp(50rem, 54vw, 62rem);
+   --s-max-width: clamp(64rem, 53vw, 84rem);
+   /*old max-width: clamp(50rem, 54vw, 62rem), oldv2 clamp(60rem, 53vw, 84rem)*/
 
    --s-nav-font-size: clamp(1.2rem, 6.4vw, 1.4rem);
    --s-nav-elements-top: clamp(3.4rem, 5.4vw, 4.4rem);
