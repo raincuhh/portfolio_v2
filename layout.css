@@ -2,7 +2,7 @@ body {
    font-style: normal;
    font-weight: 400;
    color: var(--s-text-base);
-   font-size: 1.4rem;
+   font-size: 1.2rem;
    overflow-x: hidden;
 }
 
@@ -178,14 +178,15 @@ summary {
 }
 
 .in_cont {
-   display: flex;
    padding: 0 0.2rem;
    flex-grow: 1;
    min-height: 0.1rem;
 }
 
 .section_tag {
-   font-size: 1rem;
+   display: flex;
+   font-size: 0.7rem;
+   color: var(--s-text-base);
 }
 
 .section_seperator {
@@ -211,7 +212,7 @@ summary {
 
 .intro_title,
 #intro .container .cont .in_cont .section_tag {
-   margin-top: clamp(9.6rem, 8.4vw, 10.6rem);
+   margin-top: clamp(7.4rem, 8.4vw, 10.4rem);
 }
 
 .intro_title {
@@ -225,8 +226,8 @@ summary {
 }
 
 .intro_title_text_line {
-   font-size: clamp(2rem, 8.4vw, 4rem);
-   line-height: clamp(2rem, 8.4vw, 4rem);
+   font-size: clamp(1.8rem, 8.4vw, 4rem);
+   line-height: clamp(1.8rem, 8.4vw, 4rem);
    font-weight: 600;
 }
 
@@ -240,8 +241,45 @@ summary {
    justify-content: space-between;
 }
 
+.about_title p {
+   font-size: 3rem;
+   color: var(--s-text-lower);
+}
+
+.about_title hr {
+   height: 0.1px;
+   width: 100%;
+
+   background-color: var(--s-hr-base);
+   margin: 2rem 0;
+}
+
 .about_main {
    margin-bottom: 4rem;
+}
+
+.about_main_header,
+.about_aside_header {
+   display: flex;
+   margin-bottom: 1.4rem;
+}
+
+.about_main_header,
+.about_aside_header {
+   color: var(--s-text-lower);
+}
+
+.about_main p,
+.about_aside p {
+   padding-bottom: clamp(0.5rem, 0.4vw, 1rem);
+   line-height: 1.3;
+}
+
+.about_main p span,
+.about_aside p span,
+.about_aside p a {
+   color: var(--s-text-lower);
+   text-decoration: none;
 }
 
 #contact {
@@ -253,6 +291,13 @@ summary {
    flex-direction: column;
 }
 
+@media (min-width: 320px) {
+   .about_main p,
+   .about_aside p {
+      font-size: 0.95rem;
+   }
+}
+
 @media (min-width: 768px) {
    .intro_title_text_line {
       font-size: clamp(4.4rem, 5.4vw, 6.8rem);
@@ -260,17 +305,18 @@ summary {
    }
    .intro_title,
    #intro .container .cont .in_cont .section_tag {
-      margin-top: clamp(10.6rem, 5.4vw, 12.6rem);
+      margin-top: clamp(8.6rem, 8.4vw, 10.6rem);
    }
 
    .about_wrapper {
       flex-direction: row;
    }
    .about_main {
-      min-width: 40%;
+      min-width: 45%;
+      padding-right: 3rem;
    }
    .about_aside {
-      min-width: 60%;
+      min-width: 55%;
    }
 }
 

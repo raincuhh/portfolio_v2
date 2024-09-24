@@ -12,7 +12,7 @@
 
 :root {
    --s-bg-color: rgb(255, 255, 255);
-   --s-text-base: rgb(190, 190, 190);
+   --s-text-base: rgb(185, 185, 185);
    --s-text-highlight: rgb(232, 232, 232);
    --s-text-lower: rgb(0, 0, 0);
    --s-hr-base: rgb(217, 217, 217);
@@ -37,4 +37,30 @@
    --s-preload-z-idx: 4000;
    --s-nav-z-idx: 2048;
    --s-scroll-nav-z-idx: 2047;
+}
+
+body {
+   cursor: none;
+}
+
+.cursor {
+   position: fixed;
+   top: 0;
+   left: 0;
+
+   width: 10px;
+   height: 10px;
+   background-color: black;
+   border-radius: 50%;
+   z-index: 20000;
+   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+   [data-cursor-outline] {
+      display: none;
+   }
+   body {
+      cursor: pointer;
+   }
 }

@@ -8,6 +8,7 @@ import {
    toggle_nav_menu_list_options,
    add_nav_menu_header_listeners,
 } from "./components/navbar/navbar.js";
+import { add_cursor } from "./components/cursor.js";
 
 /*
 import { gsap } from "gsap";
@@ -42,6 +43,7 @@ function main(): void {
    set_default_nav_menu_visiblity();
    set_default_lang();
    set_copyright_year();
+   add_cursor();
    //add_nav_menu_header_listeners();
 }
 
