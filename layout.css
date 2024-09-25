@@ -41,6 +41,10 @@ a:hover {
    cursor: none;
 }
 
+a {
+   text-decoration: none;
+}
+
 .page {
    background-color: var(--s-primary-color);
 }
@@ -189,29 +193,26 @@ a:hover {
    font-weight: 600;
 }
 
-.about_wrapper {
+.about_cont {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-}
-
-.about_main_header {
-   display: flex;
-   margin-bottom: 1.4rem;
-}
-
-.about_main_header {
-   color: var(--s-tertiary-color);
-   font-size: 2rem;
 }
 
 .about_aside {
    display: flex;
 }
 
-.about_main_col p {
+.about_main_col p:not(p:nth-child(1)) {
    padding-bottom: clamp(1rem, 1.4vw, 1.5rem);
    line-height: 1.4;
+}
+
+.about_main_col p:nth-child(1) {
+   display: flex;
+   margin-bottom: 2rem;
+   font-size: 2rem;
+   color: var(--s-tertiary-color);
 }
 
 .about_aside_col p {
@@ -247,9 +248,49 @@ a:hover {
    width: 100%;
 }
 
-.contact_content {
+.contact_cont {
    display: flex;
    flex-direction: column;
+}
+
+.contact_main {
+   margin-bottom: 5rem;
+   display: flex;
+   justify-content: space-between;
+}
+
+.contact_cta {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.contact_cta_content {
+   display: flex;
+}
+
+.contact_cta_content_inner,
+.contact_cta_content_inner p {
+   position: relative;
+}
+
+.contact_cta_content_inner p:first-child {
+   margin-bottom: 1rem;
+}
+
+.contact_cta_content_inner p,
+.contact_cta_btn p {
+   font-size: 2.6rem;
+}
+
+.contact_cta_content_inner p span,
+.contact_cta_btn p a {
+   color: var(--s-tertiary-color);
+}
+
+.contact_cta_btn {
+   margin-left: auto;
 }
 
 @media (min-width: 320px) {
@@ -277,7 +318,7 @@ a:hover {
       margin-top: clamp(8.6rem, 8.4vw, 10.4rem);
    }
 
-   .about_wrapper {
+   .about_cont {
       flex-direction: row;
    }
 
@@ -289,6 +330,15 @@ a:hover {
    .about_aside {
       min-width: 58%;
       padding-left: clamp(4rem, 3.4vw, 8rem);
+   }
+
+   .contact_cta {
+      flex-direction: row;
+      align-items: end;
+   }
+
+   .contact_cta_content {
+      max-width: clamp(48rem, 12.4vw, 60rem);
    }
 }
 
