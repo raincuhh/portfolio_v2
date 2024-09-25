@@ -1,3 +1,5 @@
+// main is main, handles setting up the page after dom content has loaded
+
 import { loc, change_lang, Languages } from "./localization.js";
 import { get_id, get_query, create_el, set_el_text_content, set_page_title } from "./helper.js";
 import {
@@ -7,8 +9,8 @@ import {
    set_display,
    toggle_nav_menu_list_options,
    add_nav_menu_header_listeners,
-} from "./components/navbar/navbar.js";
-import { create_cursor_instance, set_cursor_hoverable_listeners } from "./components/cursor.js";
+} from "./navbar.js";
+import { create_cursor_instance, set_cursor_hoverable_listeners } from "./cursor.js";
 
 import { gsap } from "gsap";
 
@@ -16,6 +18,47 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Observer } from "gsap/Observer";
 
 gsap.registerPlugin(ScrollTrigger, Observer);
+
+function conclude_loader() {
+   const loader: Element | null = document.querySelector("#loader");
+   loader.setAttribute("hidden", "");
+
+   lock_scrolling(false);
+   console.log("finished loading");
+}
+
+function simulate_page_loading() {
+   const progress_bar: Element | null = document.querySelector(".loader_progress_bar");
+   const loader_progress_bar_content: Element | null = document.querySelector(
+      ".loader_progress_bar_progress"
+   );
+   const loader_progress_bar_text: Element | null = document.querySelector(".loader_progress_bar_text");
+
+   lock_scrolling(true);
+
+   if (!loader_progress_bar_content || !progress_bar) {
+      lock_scrolling(false);
+      return;
+   }
+
+   let height = 0;
+   const loading_interval = setInterval(() => {
+      if (height >= 100) {
+         clearInterval(loading_interval);
+         loader_progress_bar_content.setAttribute("style", "height: 100%");
+         loader_progress_bar_text.textContent = "100";
+
+         setTimeout(() => {
+            conclude_loader();
+         }, 200);
+      } else {
+         let random_num: number = Math.floor(Math.random() * 3);
+         height += random_num + 1;
+         loader_progress_bar_content.setAttribute("style", `height: ${height}%`);
+         loader_progress_bar_text.textContent = height.toString();
+      }
+   }, 17.5);
+}
 
 function set_default_nav_menu_visiblity() {
    show_single_nav_menu_category(current_nav_menu_state);
@@ -38,14 +81,37 @@ function set_copyright_year(): void {
    }
 }
 
+function lock_scrolling(val: boolean = true) {
+   let locked: string;
+   let body: Element | null = document.querySelector("body");
+
+   switch (val) {
+      case true:
+         locked = "hidden";
+         break;
+      case false:
+         locked = "unset";
+         break;
+   }
+
+   if (body) {
+      body.setAttribute("style", `overflow: ${locked}`);
+   } else {
+      console.error("body element not found");
+   }
+}
+
 function main(): void {
+   simulate_page_loading();
+
    set_default_nav_menu_visiblity();
    set_default_lang();
    set_copyright_year();
+
    let cursor: Element = create_cursor_instance();
    set_cursor_hoverable_listeners(cursor);
-   //add_nav_menu_header_listeners();
-   console.log("working, type shi");
+
+   console.log("finished setting up page");
 }
 
 export { main };

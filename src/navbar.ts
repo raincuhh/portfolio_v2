@@ -1,4 +1,4 @@
-import { get_id, get_query } from "./../../helper.js";
+import { get_id, get_query } from "./helper.js";
 
 // nav
 enum nav_menu_state {

@@ -9,7 +9,7 @@
       <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_2/favicon-16x16.png" />
       <link rel="manifest" href="assets/favicon_2/site.webmanifest" />
       <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-      <script>
+      <script defer>
          let date_now = new Date();
          let week_day_unfm = date_now.getDay();
          let week_day_fm = (number) => {
@@ -40,64 +40,42 @@
          console.log(week_day_unfm); // test
          console.log("Date now: " + formatted);
       </script>
-      <meta name="description" content="filip ryan 2nd edition portfolio." />
+      <meta name="description" content="filipryan.dev | home" />
       <link rel="stylesheet" href="pages/fonts.css" />
       <link rel="stylesheet" href="pages/glob_layout.css" />
       <link rel="stylesheet" href="layout.css" />
+
+      <script defer type="module" src="out/localization.js"></script>
+      <script defer type="module" src="out/helper.js"></script>
+      <script defer type="module" src="out/main.js"></script>
+      <script defer type="module" src="out/onload.js"></script>
    </head>
    <body>
       <main class="page" id="root">
          <div class="page_container">
             <div class="cursor" data-cursor></div>
             <section class="category" id="loader">
-               <div class="loader_container">
-                  <div class="loader_cont">
-                     <div class="loader_in_cont">
-                        <div class="loader_progress">
-                           <div class="loader_progress_line"></div>
-                           <div class="loader_progress_text">0</div>
-                        </div>
-                        <article class="loader_quote">
-                           <q>
-                              An
-                              <span>apple</span>
-                              fell, from a
-                              <span>Serpent's lies.</span>
-                              The garden grew
-                              <span>thorns</span>
-                              where petals had
-                              <span>dried.</span>
-                           </q>
-                        </article>
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <section id="preload" hidden>
                <div class="container">
                   <div class="cont">
-                     <div class="in_cont" id="in_cont_preload">
-                        <article class="preload_article">
-                           <p>
-                              "An
-                              <span>apple</span>
-                              fell, from a
-                              <span>Serpent's lies.</span>
-                              The garden grew
-                              <span>thorns</span>
-                              where petals had
-                              <span>dried.</span>
-                              ”
-                           </p>
+                     <div class="in_cont" id="in_cont_loader">
+                        <article class="loader_cont">
+                           <div class="loader_progress_bar">
+                              <div class="loader_progress_bar_progress"></div>
+                           </div>
+                           <div class="loader_progress_bar_text">0</div>
+                           <article class="loader_quote">
+                              <q>
+                                 An
+                                 <span>apple</span>
+                                 fell, from a
+                                 <span>serpent's lies.</span>
+                                 The garden grew
+                                 <span>thorns,</span>
+                                 where petals had
+                                 <span>dried.</span>
+                              </q>
+                           </article>
                         </article>
-                        <div class="preload_copyright">
-                           <p>
-                              ©
-                              <span id="copyright_year">2024</span>
-                              filipryan.dev. All Rights Reserved.
-                           </p>
-                           <p class="section_tag marg_auto_left">[2]</p>
-                        </div>
                      </div>
                   </div>
                </div>
@@ -114,67 +92,14 @@
                         <p class="nav_header_name_last">ryan</p>
                      </div>
                   </div>
-                  <!--
-                  <div class="nav_menu">
-                     <ul class="nav_menu_list">
-                        <li class="nav_menu_item" id="nav_menu_item_contact">
-                           <header class="nav_menu_item_header" id="nav_menu_header_contact">
-                              contact me at
-                           </header>
-                           <div class="nav_menu_item_cont">
-                              <a href="mailto:filipryan.business@gmail.com">filipryan.business@...</a>
-                           </div>
-                        </li>
-                        <li class="nav_menu_item" id="nav_menu_item_theme">
-                           <header class="nav_menu_item_header" id="nav_menu_header_theme">
-                              change the theme
-                           </header>
-                           <div class="nav_menu_item_cont">
-                              <p>black</p>
-                              <p>white</p>
-                           </div>
-                        </li>
-                        <li class="nav_menu_item" id="nav_menu_item_lang">
-                           <header class="nav_menu_item_header" id="nav_menu_header_lang">
-                              switch language
-                           </header>
-                           <div class="nav_menu_item_cont">
-                              <p>english</p>
-                              <p>norsk</p>
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-                  -->
                </div>
             </nav>
-            <!--
-            <nav id="scroll_nav">
-               <div class="scroll_nav_wrapper">
-                  <ul class="scroll_nav_list">
-                     <header class="scroll_nav_header">table of contents</header>
-                     <li class="scroll_nav_item">
-                        <a href="#intro">intro</a>
-                     </li>
-                     <li class="scroll_nav_item">
-                        <a href="#about">about</a>
-                     </li>
-                     <li class="scroll_nav_item">
-                        <a href="#projects">project</a>
-                     </li>
-                     <li class="scroll_nav_item">
-                        <a href="contact">contact</a>
-                     </li>
-                  </ul>
-               </div>
-            </nav>
-            -->
             <div class="page_scroll_wrapper">
                <section class="category" id="intro">
                   <div class="container">
                      <div class="cont">
                         <div class="in_cont" id="in_cont_intro">
-                           <article class="intro_cont">
+                           <article class="inner_col intro_cont">
                               <header class="intro_title">
                                  <p class="intro_title_text_line intro_title_strong">
                                     <strong>Portfolio.</strong>
@@ -205,7 +130,7 @@
                   <div class="container">
                      <div class="cont">
                         <div class="in_cont" id="in_cont_about">
-                           <article class="about_cont">
+                           <article class="inner_col about_cont">
                               <article class="about_wrapper">
                                  <article class="about_main">
                                     <div class="about_main_header">
@@ -331,14 +256,29 @@
                      </div>
                   </div>
                </section>
+               <section class="category" id="expertise">
+                  <div class="container">
+                     <div class="cont">
+                        <div class="in_cont" id="in_cont_expertise">
+                           <article class="inner_col expertise_cont">expertise</article>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="category" id="cv">
+                  <div class="container">
+                     <div class="cont">
+                        <div class="in_cont" id="in_cont_cv">
+                           <article class="inner_col cv_cont">curriculum vitae</article>
+                        </div>
+                     </div>
+                  </div>
+               </section>
                <section class="category" id="projects">
                   <div class="container">
                      <div class="cont">
                         <div class="in_cont" id="in_cont_projects">
-                           <article class="projects_cont">
-                              <header class="projects_title"></header>
-                              <div class="projects_wrapper"></div>
-                           </article>
+                           <article class="inner_col projects_cont">projects</article>
                         </div>
                      </div>
                   </div>
@@ -347,16 +287,57 @@
                   <div class="container">
                      <div class="cont">
                         <div class="in_cont" id="in_cont_contact">
-                           <article class="contact_cont">
-                              <header class="contact_title"></header>
-                              <div class="contact_wrapper">
-                                 <div class="contact_connect"></div>
+                           <article class="inner_col contact_cont">
+                              <div class="contact_top">
+                                 <header class="contact_title">
+                                    <p>
+                                       Interested in
+                                       <span>discussing a project,</span>
+                                       <span>collaboration,</span>
+                                       or
+                                       <span>idea?</span>
+                                       I'm open to exploring opportunities and hearing thoughts. Feel free to
+                                    </p>
+                                    <p>
+                                       <a href="mailto:filipryan.business@gmail.com">reach out.</a>
+                                    </p>
+                                 </header>
+                              </div>
+                              <div class="contact_footer">
                                  <div class="contact_copyright">
                                     <p>
-                                       ©
-                                       <span id="copyright_year">2024</span>
-                                       filipryan.dev. All Rights Reserved.
+                                       ©2024-
+                                       <span class="copyright_year">2024</span>
+                                       Filip Ryan.dev. - All Rights Reserved. Made by yours truly (
+                                       <span>me,</span>
+                                       <span>myself,</span>
+                                       and
+                                       <span>i.</span>
+                                       )
                                     </p>
+                                    <p>
+                                       <a href="#">privacy policy</a>
+                                    </p>
+                                 </div>
+                                 <div class="contact_platforms">
+                                    <ul class="contact_platform_list">
+                                       <li class="contact_list_item" id="contact_list_github">
+                                          <a class="cursor_hoverable" href="https://github.com/raincuhh">
+                                             github.
+                                          </a>
+                                       </li>
+                                       <li class="contact_list_item" id="contact_list_instagram">
+                                          <a class="cursor_hoverable" href="#">instagram.</a>
+                                       </li>
+                                       <li class="contact_list_item" id="contact_list_linkedin">
+                                          <a
+                                             class="cursor_hoverable"
+                                             href="https://www.linkedin.com/in/filip-ryan-93677532b/"
+                                          >
+                                             linkedin.
+                                          </a>
+                                       </li>
+                                    </ul>
                                  </div>
                               </div>
                            </article>
@@ -367,9 +348,5 @@
             </div>
          </div>
       </main>
-      <script type="module" src="out/localization.js"></script>
-      <script type="module" src="out/helper.js"></script>
-      <script type="module" src="out/main.js"></script>
-      <script type="module" src="out/onload.js"></script>
    </body>
 </html>

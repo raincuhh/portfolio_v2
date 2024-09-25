@@ -1,3 +1,5 @@
+// main entrypoint into the program
+
 import { get_id } from "./helper.js";
 import { main } from "./main.js";
 
@@ -6,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    if (!root || !root.parentElement) {
       console.log("ERROR, no root element found");
+      return;
    }
 
    console.log(

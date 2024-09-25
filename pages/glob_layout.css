@@ -11,17 +11,16 @@
 }
 
 :root {
-   --s-bg-color: rgb(255, 255, 255);
-   --s-text-base: rgb(185, 185, 185);
-   --s-text-highlight: rgb(232, 232, 232);
-   --s-text-lower: rgb(0, 0, 0);
-   --s-hr-base: rgb(217, 217, 217);
+   --s-primary-color: rgb(255, 255, 255);
+   --s-secondary-color: rgb(185, 185, 185);
+   --s-tertiary-color: rgb(0, 0, 0);
+
+   --s-loader-progress-bar-bg-color: rgb(10, 10, 10);
+
    --s-transition-hover-base: all ease-in-out 100ms;
 
-   --s-base-max-width: clamp(100rem, 12vw, 120rem);
    --s-max-width: clamp(64rem, 53vw, 84rem);
-   /*old max-width: clamp(50rem, 54vw, 62rem), oldv2 clamp(60rem, 53vw, 84rem)*/
-   --s-loader-max-width: clamp(68rem, 53vw, 88rem);
+   --s-loader-max-width: clamp(64rem, 84vw, 104rem);
 
    --s-nav-font-size: clamp(1.2rem, 6.4vw, 1.4rem);
    --s-nav-elements-top: clamp(3.4rem, 5.4vw, 4.4rem);
@@ -35,7 +34,8 @@
    --xxl-width: 2560px;
    */
 
-   --s-preload-z-idx: 4000;
+   --s-loader-z-idx: 4000;
+   --s-cursor-z-idx: 3000;
    --s-nav-z-idx: 2048;
    --s-scroll-nav-z-idx: 2047;
 }
@@ -53,7 +53,7 @@ body {
    height: 10px;
    background-color: black;
    border-radius: 50%;
-   z-index: 20000;
+   z-index: var(--s-cursor-z-idx);
    pointer-events: none;
 }
 
