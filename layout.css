@@ -33,6 +33,14 @@ summary {
    display: none;
 }
 
+::-webkit-scrollbar {
+   display: none;
+}
+
+a:hover {
+   cursor: none;
+}
+
 .page {
    background-color: var(--s-bg-color);
 }
@@ -42,6 +50,26 @@ summary {
    flex-direction: column;
    height: 100%;
    overflow-y: hidden;
+}
+
+.loader_container {
+   margin: 0 auto;
+   max-width: var(--s-loader-max-width);
+   padding: 0 1.8rem;
+   height: 100%;
+}
+
+.loader_cont {
+   margin: 0 -0.2rem;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.loader_in_cont {
+   padding: 0 0.2rem;
+   flex-grow: 1;
+   min-height: 0.1rem;
 }
 
 #preload {
@@ -59,13 +87,6 @@ summary {
    justify-content: center;
 }
 
-.preload_title {
-   display: flex;
-   color: var(--s-text-lower);
-   padding-bottom: 2rem;
-   padding-top: clamp(15.7rem, 17vw, 30.7rem);
-}
-
 .preload_article {
    display: flex;
    flex-direction: column;
@@ -75,19 +96,15 @@ summary {
    padding-bottom: 2rem;
 }
 
+.preload_article p span {
+   color: var(--s-text-lower);
+}
+
 .preload_article hr {
    height: 1px;
    background-color: black;
    width: 100%;
    margin-bottom: 4rem;
-}
-
-.preload_copyright {
-   display: flex;
-}
-
-.preload_wip {
-   margin-top: auto;
 }
 
 #nav {
@@ -274,7 +291,6 @@ summary {
 .about_aside_col p a {
    color: var(--s-text-lower);
    text-decoration: none;
-   cursor: pointer;
 }
 
 .about_aside_col p a::before {
@@ -317,8 +333,8 @@ summary {
 
 @media (min-width: 768px) {
    .intro_title_text_line {
-      font-size: clamp(6rem, 9.3vw, 7.2rem);
-      line-height: clamp(6rem, 9.3vw, 7.2rem);
+      font-size: clamp(5.3rem, 9.3vw, 7.2rem);
+      line-height: clamp(5.3rem, 9.3vw, 7.2rem);
    }
 
    .intro_title,
@@ -337,7 +353,7 @@ summary {
 
    .about_aside {
       min-width: 58%;
-      padding-left: clamp(6rem, 3.4vw, 8rem);
+      padding-left: clamp(4rem, 3.4vw, 8rem);
    }
 }
 

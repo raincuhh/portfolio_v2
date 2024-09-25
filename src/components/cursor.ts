@@ -33,8 +33,8 @@ function set_cursor_hoverable_listeners(cursor: Element): void {
          cursor_timeout = setTimeout(() => {
             gsap.to(cursor, {
                duration: 0.3,
-               width: 20,
-               height: 20,
+               width: 25,
+               height: 25,
                ease: "power4.inout",
             });
          }, 10);
