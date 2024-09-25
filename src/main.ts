@@ -8,15 +8,14 @@ import {
    toggle_nav_menu_list_options,
    add_nav_menu_header_listeners,
 } from "./components/navbar/navbar.js";
-import { add_cursor } from "./components/cursor.js";
+import { create_cursor_instance, set_cursor_hoverable_listeners } from "./components/cursor.js";
 
-/*
 import { gsap } from "gsap";
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Observer } from "gsap/Observer";
 
 gsap.registerPlugin(ScrollTrigger, Observer);
-*/
 
 function set_default_nav_menu_visiblity() {
    show_single_nav_menu_category(current_nav_menu_state);
@@ -43,8 +42,10 @@ function main(): void {
    set_default_nav_menu_visiblity();
    set_default_lang();
    set_copyright_year();
-   add_cursor();
+   let cursor: Element = create_cursor_instance();
+   set_cursor_hoverable_listeners(cursor);
    //add_nav_menu_header_listeners();
+   console.log("working, type shi");
 }
 
 export { main };
