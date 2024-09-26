@@ -1,21 +1,35 @@
 # Portfolio v2
 
-## brief
+## Brief
 
-portfolio edition 2. WIP.
+This document outlines the steps for setting up and running the second edition of the portfolio project, currently a work in progress.
 
-## for installing dependencies
+## Installing Dependencies
 
-Steps for installing dependencies.
+Follow these steps to install the necessary dependencies for this project:
 
-tips: if you have npm and forgot commands then just do "npm help".
+1. **Install npm**:  
+   If npm is not already installed, you can obtain it by following the instructions at [npm GitHub](https://github.com/npm/cli). Note that Node.js is required and can be downloaded from the [Node.js official website](https://nodejs.org/en).
 
-1. Get npm if you havent, https://github.com/npm/cli (you need node-js for this https://nodejs.org/en)
-2. Make sure npm is installed, go cmd then type "npm --version", should display a version.
-3. Get a powershell terminal in visual studio code, and type "npm install" to install all dependencies in this project.
+2. **Verify npm Installation**:  
+   Open a command prompt and run `npm --version` to ensure npm is correctly installed. A version number should be displayed.
 
-## after installing dependencies
+3. **Install Project Dependencies**:  
+   Open Visual Studio Code and launch a PowerShell terminal.  
+   Run `npm install` to install all necessary dependencies for the project.
 
-1. Inside the powershell terminal, do "npm run tsc" to compile the ts files, and then do "npm run dev" to open the vue testing server.
-2. Then just click on the localhost or type "o" in the node terminal to open up a window.
-3. To terminate the vite server just do ctrl + c then type y after the terminate batch job prompt in the node terminal where you first ran "npm run dev".
+## Post-Installation Steps
+
+Once dependencies are installed, proceed with the following:
+
+1. **Compile TypeScript Files**:  
+   In the PowerShell terminal, run `npm run tsc` to compile the TypeScript files.
+
+2. **Launch the Development Server**:  
+   Run `npm run dev` to start the Vue.js development server.  
+   Click on the provided localhost link or type `o` in the terminal to open the project in your default web browser.
+
+3. **Terminate the Development Server**:  
+   To stop the Vite server, press `Ctrl + C` in the terminal where `npm run dev` was executed.  
+   Confirm by typing `y` when prompted to terminate the batch job.
+
