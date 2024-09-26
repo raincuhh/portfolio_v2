@@ -18,3 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    main();
 });
+
+window.onunload = () => {
+   window.scrollTo(0, 0);
+};

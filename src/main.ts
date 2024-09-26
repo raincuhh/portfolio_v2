@@ -23,7 +23,7 @@ function conclude_loader() {
    const loader: Element | null = document.querySelector("#loader");
    loader.setAttribute("hidden", "");
 
-   lock_scrolling(false);
+   //lock_scrolling(false);
    console.log("finished loading");
 }
 
@@ -34,10 +34,10 @@ function simulate_page_loading() {
    );
    const loader_progress_bar_text: Element | null = document.querySelector(".loader_progress_bar_text");
 
-   lock_scrolling(true);
+   lock_scrolling(false);
 
    if (!loader_progress_bar_content || !progress_bar || !loader_progress_bar_text) {
-      lock_scrolling(false);
+      //lock_scrolling(false);
       console.error("ERROR: no loader bar elements found.");
       return;
    }

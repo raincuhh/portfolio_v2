@@ -25,23 +25,32 @@
    --s-nav-font-size: clamp(1.2rem, 6.4vw, 1.4rem);
    --s-nav-elements-top: clamp(3.4rem, 5.4vw, 4.4rem);
 
-   /*viewport width
    --xs-width: 320px;
    --sm-width: 576px;
    --md-width: 768px;
    --lg-width: 1024px;
    --xl-width: 1440px;
    --xxl-width: 2560px;
-   */
+
+   --s-marg-em-m: 1em;
+   --s-marg-em-s: calc(1em / 1.618);
+   --s-marg-em-xs: calc((1em / 1.618) / 1.618);
+   --s-marg-em-xxs: calc(((1em / 1.618) / 1.618) / 1.618);
+   --s-marg-em-l: calc(1em * 1.618);
+   --s-marg-em-xl: calc((1em * 1.618) * 1.618);
+   --s-marg-em-xxl: calc(((1em * 1.618) * 1.618) * 1.618);
+
+   --s-fs-xs: clamp(0.75rem, 1.5vw + 0.5rem, 1rem);
+   --s-fs-s: clamp(0.875rem, 1.75vw + 0.5rem, 1.125rem);
+   --s-fs-m: clamp(1rem, 2vw + 1rem, 1.5rem);
+   --s-fs-l: clamp(1.25rem, 2.5vw + 1rem, 2rem);
+   --s-fs-xl: clamp(1.5rem, 3vw + 1rem, 2.5rem);
+   --s-fs-xxl: clamp(2rem, 4vw + 1rem, 3rem);
 
    --s-loader-z-idx: 4000;
    --s-cursor-z-idx: 3000;
    --s-nav-z-idx: 2048;
    --s-scroll-nav-z-idx: 2047;
-}
-
-body {
-   cursor: none;
 }
 
 .cursor {
