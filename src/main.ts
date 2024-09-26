@@ -36,8 +36,9 @@ function simulate_page_loading() {
 
    lock_scrolling(true);
 
-   if (!loader_progress_bar_content || !progress_bar) {
+   if (!loader_progress_bar_content || !progress_bar || !loader_progress_bar_text) {
       lock_scrolling(false);
+      console.error("ERROR: no loader bar elements found.");
       return;
    }
 
@@ -48,6 +49,7 @@ function simulate_page_loading() {
          loader_progress_bar_content.setAttribute("style", "height: 100%");
          loader_progress_bar_text.textContent = "100";
 
+         // after simulation is finished, conclude loading
          setTimeout(() => {
             conclude_loader();
          }, 200);
@@ -64,8 +66,7 @@ function set_default_nav_menu_visiblity() {
    show_single_nav_menu_category(current_nav_menu_state);
 }
 
-// language
-function set_default_lang(): void {
+function set_default_language(): void {
    change_lang(Languages.English);
 }
 
@@ -83,7 +84,6 @@ function set_copyright_year(): void {
 
 function lock_scrolling(val: boolean = true) {
    let locked: string;
-   let body: Element | null = document.querySelector("body");
 
    switch (val) {
       case true:
@@ -94,6 +94,7 @@ function lock_scrolling(val: boolean = true) {
          break;
    }
 
+   let body: Element | null = document.querySelector("body");
    if (body) {
       body.setAttribute("style", `overflow: ${locked}`);
    } else {
@@ -105,11 +106,11 @@ function main(): void {
    simulate_page_loading();
 
    set_default_nav_menu_visiblity();
-   set_default_lang();
+   set_default_language();
    set_copyright_year();
 
-   let cursor: Element = create_cursor_instance();
-   set_cursor_hoverable_listeners(cursor);
+   let cursor: Element | null = create_cursor_instance();
+   if (cursor) set_cursor_hoverable_listeners(cursor);
 
    console.log("finished setting up page");
 }

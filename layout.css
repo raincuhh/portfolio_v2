@@ -45,6 +45,22 @@ a {
    text-decoration: none;
 }
 
+.cursor_hoverable::before {
+   margin-bottom: -0.25rem;
+   content: " ";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 0;
+   height: 1px;
+   background-color: var(--s-tertiary-color);
+   transition: width 0.4s ease-out;
+}
+
+.cursor_hoverable:hover::before {
+   width: 100%;
+}
+
 .page {
    background-color: var(--s-primary-color);
 }
@@ -188,8 +204,8 @@ a {
 }
 
 .intro_title_text_line {
-   font-size: clamp(2rem, 9.4vw, 6rem);
-   line-height: clamp(2rem, 9.4vw, 6rem);
+   font-size: clamp(1.8rem, 9.4vw, 6rem);
+   line-height: clamp(1.8rem, 9.4vw, 6rem);
    font-weight: 600;
 }
 
@@ -199,6 +215,7 @@ a {
    justify-content: space-between;
 }
 
+.about_main,
 .about_aside {
    display: flex;
 }
@@ -232,20 +249,19 @@ a {
    position: relative;
 }
 
-.cursor_hoverable::before {
-   margin-bottom: -0.25rem;
-   content: " ";
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 0;
-   height: 1px;
-   background-color: var(--s-tertiary-color);
-   transition: width 0.4s ease-out;
+.expertise_cont,
+.education_cont,
+.cv_cont {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
 
-.cursor_hoverable:hover::before {
-   width: 100%;
+.expertise_langs,
+.expertise_tools,
+.education_beside,
+.cv_beside {
+   display: flex;
 }
 
 .contact_cont {
@@ -324,12 +340,18 @@ a {
 
    .about_main {
       min-width: 42%;
-      padding-right: clamp(3rem, 3.4vw, 6rem);
+      padding-right: clamp(1rem, 2.4vw, 6rem);
    }
 
    .about_aside {
       min-width: 58%;
       padding-left: clamp(4rem, 3.4vw, 8rem);
+   }
+
+   .expertise_cont,
+   .education_cont,
+   .cv_cont {
+      flex-direction: row;
    }
 
    .contact_cta {
