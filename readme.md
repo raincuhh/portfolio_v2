@@ -2,9 +2,7 @@
 
 ## brief
 
-This portfolio is the v2 of the original portfolio i made for school, and again, its made for a school project.
-
-This is a WIP, this is unfinished so chill.
+portfolio edition 2. WIP.
 
 ## for installing dependencies
 
