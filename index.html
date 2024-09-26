@@ -261,7 +261,7 @@
                                  </p>
                               </header>
                               <aside class="expertise_beside">
-                                 <div class="expertise_langs">
+                                 <div class="beside_list_cont" id="beside_langs">
                                     <ul class="expertise_langs_list">
                                        <li class="expertise_langs_item">
                                           <p>
@@ -286,7 +286,7 @@
                                        <li class="expertise_langs_item">
                                           <p>
                                              <a class="cursor_hoverable" href="">
-                                                gdscript (2022). for godot
+                                                gdscript (2022), for godot.
                                              </a>
                                           </p>
                                        </li>
@@ -296,7 +296,7 @@
                                           </p>
                                        </li>
                                        <!--
-                                       not yet haha, after i do the ir in my compiler i can say i have learnt x86_64
+                                       not yet haha, after i do the ir and codegen part in my compiler i can say i have learnt x86_64 asm
                                        <li class="expertise_langs_item"></li>
                                           <p>
                                              <a href="">x86-64 asm (2024)</a>
@@ -304,18 +304,35 @@
                                        </li>
                                        -->
                                     </ul>
-                                    <span class="section_tag marg_auto_left">[1]</span>
                                  </div>
-                                 <div class="expertise_tools">
-                                    <ul class="expertise_tools_list">
-                                       <li class="expertise_tools_item">
+                              </aside>
+                           </article>
+                           <span class="section_tag">[1]</span>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="category" id="tools">
+                  <div class="container">
+                     <div class="cont">
+                        <div class="in_cont" id="in_cont_tools">
+                           <article class="inner_col tools_cont">
+                              <header class="tools_title">
+                                 <p>
+                                    <span>My Tools.</span>
+                                 </p>
+                              </header>
+                              <aside class="tools_beside">
+                                 <div class="beside_list_cont" id="beside_tools">
+                                    <ul class="tools_list">
+                                       <li class="tools_item">
                                           <p>
                                              <a class="cursor_hoverable" href="https://godotengine.org">
                                                 godot engine (2022).
                                              </a>
                                           </p>
                                        </li>
-                                       <li class="expertise_tools_item">
+                                       <li class="tools_item">
                                           <p>
                                              <a
                                                 class="cursor_hoverable"
@@ -325,7 +342,7 @@
                                              </a>
                                           </p>
                                        </li>
-                                       <li class="expertise_tools_item">
+                                       <li class="tools_item">
                                           <p>
                                              <a
                                                 class="cursor_hoverable"
@@ -335,7 +352,7 @@
                                              </a>
                                           </p>
                                        </li>
-                                       <li class="expertise_tools_item">
+                                       <li class="tools_item">
                                           <p>
                                              <a
                                                 class="cursor_hoverable"
@@ -345,14 +362,14 @@
                                              </a>
                                           </p>
                                        </li>
-                                       <li class="expertise_tools_item">
+                                       <li class="tools_item">
                                           <p>
                                              <a class="cursor_hoverable" href="https://www.aseprite.org">
                                                 aseprite (2024), for game assets.
                                              </a>
                                           </p>
                                        </li>
-                                       <li class="expertise_tools_item">
+                                       <li class="tools_item">
                                           <p>
                                              <a class="cursor_hoverable" href="https://vitejs.dev">
                                                 vite.js (2024), familiar.
@@ -360,10 +377,10 @@
                                           </p>
                                        </li>
                                     </ul>
-                                    <span class="section_tag marg_auto_left">[2]</span>
                                  </div>
                               </aside>
                            </article>
+                           <span class="section_tag">[2]</span>
                         </div>
                      </div>
                   </div>
@@ -379,38 +396,40 @@
                                  </p>
                               </header>
                               <aside class="education_beside">
-                                 <ul class="education_list">
-                                    <li class="education_item">
-                                       <p>
-                                          <a class="cursor_hoverable" href="">
-                                             <span>Åvangen Primary School</span>
-                                             (2013-2020)
-                                          </a>
-                                          <span class="arrow_ico"></span>
-                                       </p>
-                                    </li>
-                                    <li class="education_item">
-                                       <p>
-                                          <a class="cursor_hoverable" href="">
-                                             <span>Nøkkeland Secondary School</span>
-                                             (2020-2023)
-                                          </a>
-                                          <span class="arrow_ico"></span>
-                                       </p>
-                                    </li>
-                                    <li class="education_item">
-                                       <p>
-                                          <a class="cursor_hoverable" href="">
-                                             <span>Kirkeparken College</span>
-                                             (2023-present)
-                                          </a>
-                                          <span class="arrow_ico"></span>
-                                       </p>
-                                    </li>
-                                 </ul>
-                                 <span class="section_tag marg_auto_left">[3]</span>
+                                 <div class="beside_list_cont" id="beside_education">
+                                    <ul class="education_list">
+                                       <li class="education_item">
+                                          <p>
+                                             <a class="cursor_hoverable" href="">
+                                                <span>Åvangen Primary School</span>
+                                                (2013-2020)
+                                             </a>
+                                             <span class="arrow_ico"></span>
+                                          </p>
+                                       </li>
+                                       <li class="education_item">
+                                          <p>
+                                             <a class="cursor_hoverable" href="">
+                                                <span>Nøkkeland Secondary School</span>
+                                                (2020-2023)
+                                             </a>
+                                             <span class="arrow_ico"></span>
+                                          </p>
+                                       </li>
+                                       <li class="education_item">
+                                          <p>
+                                             <a class="cursor_hoverable" href="">
+                                                <span>Kirkeparken College</span>
+                                                (2023-present)
+                                             </a>
+                                             <span class="arrow_ico"></span>
+                                          </p>
+                                       </li>
+                                    </ul>
+                                 </div>
                               </aside>
                            </article>
+                           <span class="section_tag">[3]</span>
                         </div>
                      </div>
                   </div>
@@ -426,20 +445,22 @@
                                  </p>
                               </header>
                               <aside class="cv_beside">
-                                 <ul class="cv_list">
-                                    <li class="cv_item">
-                                       <a class="cursor_hoverable" href="">cv (edition 1).</a>
-                                    </li>
-                                    <li class="cv_item">
-                                       <a class="cursor_hoverable" href="">cv (edition 2).</a>
-                                    </li>
-                                    <li class="cv_item">
-                                       <a class="cursor_hoverable" href="">cv (edition 3).</a>
-                                    </li>
-                                 </ul>
-                                 <span class="section_tag marg_auto_left">[4]</span>
+                                 <div class="beside_list_cont" id="beside_cv">
+                                    <ul class="cv_list">
+                                       <li class="cv_item">
+                                          <a class="cursor_hoverable" href="">cv (edition 1).</a>
+                                       </li>
+                                       <li class="cv_item">
+                                          <a class="cursor_hoverable" href="">cv (edition 2).</a>
+                                       </li>
+                                       <li class="cv_item">
+                                          <a class="cursor_hoverable" href="">cv (edition 3).</a>
+                                       </li>
+                                    </ul>
+                                 </div>
                               </aside>
                            </article>
+                           <span class="section_tag">[4]</span>
                         </div>
                      </div>
                   </div>
