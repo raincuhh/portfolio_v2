@@ -1,20 +1,20 @@
-# Cache files  
+# Cache files
 .eslintcache
 .npm
 *.tsbuildinfo
 # Directories
-out/           
-node_modules/   
-# Env files      
-.env.           
+
+node_modules/
+# Env files
+.env.
 .env.test
 # Logs
 *.log
 logs
 npm-debug.log*
 # Misc files
-.DS_Store       
-notes.md 
+.DS_Store
+notes.md
 
 # ide dependent
 .vscode/
