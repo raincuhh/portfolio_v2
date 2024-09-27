@@ -7,6 +7,7 @@
 node_modules/
 out/
 dist/
+.vite/
 
 # Env files
 .env.
@@ -22,6 +23,4 @@ npm-debug.log*
 notes.md
 
 # ide dependent
-.vscode/
-.vscode
-vscode
+vscode/
