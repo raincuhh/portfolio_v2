@@ -11,6 +11,7 @@ import {
    add_nav_menu_header_listeners,
 } from "./navbar.js";
 import { create_cursor_instance, set_cursor_hoverable_listeners } from "./cursor.js";
+import { add_smooth_scroll } from "./page_scroll.js";
 
 import { gsap } from "gsap";
 
@@ -24,6 +25,7 @@ function conclude_loader() {
    loader.setAttribute("hidden", "");
 
    //lock_scrolling(false);
+   add_smooth_scroll();
    console.log("finished loading");
 }
 

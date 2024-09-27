@@ -2,6 +2,7 @@
 import { change_lang, Languages } from "./localization.js";
 import { current_nav_menu_state, show_single_nav_menu_category, } from "./navbar.js";
 import { create_cursor_instance, set_cursor_hoverable_listeners } from "./cursor.js";
+import { add_smooth_scroll } from "./page_scroll.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Observer } from "gsap/Observer";
@@ -10,6 +11,7 @@ function conclude_loader() {
     const loader = document.querySelector("#loader");
     loader.setAttribute("hidden", "");
     //lock_scrolling(false);
+    add_smooth_scroll();
     console.log("finished loading");
 }
 function simulate_page_loading() {

@@ -73,4 +73,7 @@
    body {
       cursor: pointer;
    }
+   .cursor {
+      display: none;
+   }
 }

@@ -46,13 +46,13 @@ a {
 }
 
 .hvr_line::before {
-   margin-bottom: -0.2em;
+   margin-bottom: -0.1em;
    content: " ";
    position: absolute;
    bottom: 0;
    left: 0;
    width: 0;
-   height: 1px;
+   height: 0.1rem;
    background-color: var(--s-tertiary-color);
    transition: width 0.3s ease-out;
 }
@@ -155,6 +155,10 @@ a {
    display: none;
 }
 
+.page_scroll_wrapper {
+   overflow-y: scroll;
+}
+
 .container {
    margin: 0 auto;
    max-width: var(--s-max-width);
@@ -231,7 +235,7 @@ a {
 
 .about_main_col p:not(p:first-child, p:last-child) {
    padding-bottom: var(--s-marg-em-m);
-   font-size: calc(var(--s-fs-m) - 0.2em);
+   font-size: calc(var(--s-fs-m) - 0.3em);
    line-height: 1.4;
 }
 
@@ -243,13 +247,13 @@ a {
 }
 
 .about_aside_col p:not(.about_aside_col p:last-child) {
-   padding-bottom: var(--s-marg-em-l);
+   padding-bottom: calc(var(--s-marg-em-l) - 0.3em);
    line-height: 1.4;
 }
 
 .about_main_col p,
 .about_aside_col p {
-   font-size: calc(var(--s-fs-m) - 0.2em);
+   font-size: calc(var(--s-fs-m) - 0.3em);
 }
 
 .about_main_col p span,
@@ -264,8 +268,7 @@ a {
    position: relative;
 }
 
-/*expertise, tools, education, cv*/
-
+/* expertise, tools, education, cv */
 #in_cont_expertises,
 #in_cont_tools,
 #in_cont_education,
@@ -294,7 +297,7 @@ a {
 
 .cv_item p {
    position: relative;
-   font-size: calc(var(--s-fs-m) - 0.2em);
+   font-size: calc(var(--s-fs-m) - 0.3em);
 }
 
 /* contact */
@@ -306,18 +309,13 @@ a {
 .contact_main {
    margin-bottom: var(--s-marg-em-xxl);
    display: flex;
-   justify-content: space-between;
-}
-
-.contact_cta {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
    width: 100%;
+   justify-content: space-between;
 }
 
 .contact_cta_content {
    display: flex;
+   justify-content: space-between;
 }
 
 .contact_cta_content_inner,
@@ -371,7 +369,7 @@ a {
 }
 
 .contact_platforms_item:not(.contact_platforms_item:last-child) {
-   padding-right: var(--s-marg-em-l);
+   padding-right: var(--s-marg-em-s);
 }
 
 /* mediaqueries */
@@ -386,10 +384,6 @@ a {
    .about_cont,
    .projects_cont {
       margin-bottom: calc(var(--s-marg-em-xxl) + clamp(8rem, 9.3vw, 14rem));
-   }
-
-   .cv_cont {
-      margin-bottom: calc(var(--s-marg-em-xxl) + clamp(1rem, 9.3vw, 1.5rem));
    }
 
    #cv_cont {

@@ -1,42 +1,88 @@
+import { gsap } from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Observer } from "gsap/Observer";
+
+gsap.registerPlugin(ScrollTrigger, Observer);
+
+function add_smooth_scroll() {
+   let html: HTMLElement = document.documentElement;
+   let body: HTMLElement = document.body;
+   let req_id: any = null;
+
+   var scroller = {
+      target: document.querySelector("#page_scroll_wrapper"),
+      ease: 0.05,
+      end_y: 0,
+      y: 0,
+      resize_req: 1,
+      scroll_req: 0,
+   };
+
+   gsap.to(scroller.target, {
+      rotation: 0.01,
+      force3D: true,
+   });
+
+   window.addEventListener("load", on_page_load);
+
+   function on_page_load() {
+      update_scroller();
+      window.focus();
+      window.addEventListener("resize", on_page_resize);
+      window.addEventListener("scroll", on_page_scroll);
+   }
+
+   function update_scroller() {
+      let resized: boolean = scroller.resize_req > 0;
+
+      if (resized) {
+         let height: number = scroller.target.clientHeight;
+         body.style.height = height + "px";
+         scroller.resize_req = 0;
+      }
+
+      let scroll_y: number = window.screenY || html.scrollTop || body.scrollTop || 0;
+
+      scroller.end_y = scroll_y;
+      scroller.y += (scroll_y - scroller.y) * scroller.ease;
+
+      if (Math.abs(scroll_y - scroller.y) < 0.05 || resized) {
+         scroller.y = scroll_y;
+         scroller.scroll_req = 0;
+      }
+
+      gsap.to(scroller.target, {
+         y: -scroller.y,
+      });
+   }
+
+   function on_page_resize() {
+      scroller.resize_req++;
+      if (!req_id) {
+         req_id = requestAnimationFrame(update_scroller);
+      }
+      console.log(scroller.resize_req);
+   }
+
+   function on_page_scroll() {
+      scroller.scroll_req++;
+      if (!req_id) {
+         req_id = requestAnimationFrame(update_scroller);
+      }
+   }
+}
+
+export { add_smooth_scroll };
+
 /*
-var html = document.documentElement;
-var body = document.body;
-
-var scroller = {
-  target: document.querySelector("#scroll-container"),
-  ease: 0.05, // <= scroll speed
-  endY: 0,
-  y: 0,
-  resizeRequest: 1,
-  scrollRequest: 0,
-};
-
-var requestId = null;
-
 TweenLite.set(scroller.target, {
   rotation: 0.01,
   force3D: true
 });
 
-window.addEventListener("load", onLoad);
-
-function onLoad() {
-  updateScroller();
-  window.focus();
-  window.addEventListener("resize", onResize);
-  document.addEventListener("scroll", onScroll);
-}
 
 function updateScroller() {
-
-  var resized = scroller.resizeRequest > 0;
-
-  if (resized) {
-    var height = scroller.target.clientHeight;
-    body.style.height = height + "px";
-    scroller.resizeRequest = 0;
-  }
-
   var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
 
   scroller.endY = scrollY;
