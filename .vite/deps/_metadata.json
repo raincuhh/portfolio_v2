@@ -1,0 +1,31 @@
+{
+  "hash": "db9b6246",
+  "configHash": "89a0beac",
+  "lockfileHash": "4c734a58",
+  "browserHash": "a2753ae6",
+  "optimized": {
+    "gsap": {
+      "src": "../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "4c1235ca",
+      "needsInterop": false
+    },
+    "gsap/ScrollTrigger": {
+      "src": "../../node_modules/gsap/ScrollTrigger.js",
+      "file": "gsap_ScrollTrigger.js",
+      "fileHash": "58238adb",
+      "needsInterop": false
+    },
+    "gsap/Observer": {
+      "src": "../../node_modules/gsap/Observer.js",
+      "file": "gsap_Observer.js",
+      "fileHash": "d9629f65",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-BC5G4GQD": {
+      "file": "chunk-BC5G4GQD.js"
+    }
+  }
+}
