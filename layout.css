@@ -52,7 +52,7 @@ a {
    bottom: 0;
    left: 0;
    width: 0;
-   height: 0.1rem;
+   height: 0.01em;
    background-color: var(--s-tertiary-color);
    transition: width 0.3s ease-out;
 }

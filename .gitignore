@@ -2,12 +2,16 @@
 .eslintcache
 .npm
 *.tsbuildinfo
-# Directories
 
+# Directories
 node_modules/
+out/
+dist/
+
 # Env files
 .env.
 .env.test
+
 # Logs
 *.log
 logs
