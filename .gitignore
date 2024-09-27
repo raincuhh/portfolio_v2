@@ -16,6 +16,7 @@ dist/
 *.log
 logs
 npm-debug.log*
+
 # Misc files
 .DS_Store
 notes.md
