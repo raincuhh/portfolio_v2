@@ -51,6 +51,7 @@
    --s-cursor-z-idx: 3000;
    --s-nav-z-idx: 2048;
    --s-scroll-nav-z-idx: 2047;
+   --s-page-scroll-wrapper-z-idx: 100;
 }
 
 .cursor {

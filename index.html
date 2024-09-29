@@ -46,263 +46,252 @@
       <link rel="stylesheet" href="layout.css" />
 
       <script defer type="module" src="out/localization.js"></script>
+      <script type="module" src="out/copyright.js"></script>
       <script defer type="module" src="out/helper.js"></script>
       <script defer type="module" src="out/main.js"></script>
       <script defer type="module" src="out/onload.js"></script>
    </head>
    <body>
+      <div class="cursor" data-cursor></div>
+      <section id="loader">
+         <div class="container">
+            <div class="cont">
+               <div class="in_cont" id="in_cont_loader">
+                  <article class="loader_cont">
+                     <div class="loader_progress_bar">
+                        <div class="loader_progress_bar_progress"></div>
+                     </div>
+                     <div class="loader_progress_bar_text">0</div>
+                     <article class="loader_quote">
+                        <q>
+                           An
+                           <span>apple</span>
+                           fell, from a
+                           <span>serpent's lies.</span>
+                        </q>
+                     </article>
+                  </article>
+               </div>
+            </div>
+         </div>
+      </section>
+      <nav id="nav">
+         <div class="nav_wrapper">
+            <div class="nav_header">
+               <p class="nav_header_name_first">filip</p>
+               <div class="nav_header_info">
+                  <p class="nav_header_copyright">
+                     ©
+                     <span id="copyright_year">2024</span>
+                  </p>
+                  <p class="nav_header_name_last">ryan</p>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <div class="page_scroll_bar"></div>
       <main class="page" id="root">
-         <div class="page_container">
-            <div class="cursor" data-cursor></div>
-            <section class="category" id="loader">
+         <div id="page_scroll">
+            <section class="category" id="intro">
                <div class="container">
                   <div class="cont">
-                     <div class="in_cont" id="in_cont_loader">
-                        <article class="loader_cont">
-                           <div class="loader_progress_bar">
-                              <div class="loader_progress_bar_progress"></div>
-                           </div>
-                           <div class="loader_progress_bar_text">0</div>
-                           <article class="loader_quote">
-                              <q>
-                                 An
-                                 <span>apple</span>
-                                 fell, from a
-                                 <span>serpent's lies.</span>
-                                 The garden grew
-                                 <span>thorns,</span>
-                                 where petals had
-                                 <span>dried.</span>
-                              </q>
-                           </article>
+                     <div class="in_cont" id="in_cont_intro">
+                        <article class="inner_col intro_cont">
+                           <header class="intro_title">
+                              <p class="intro_title_text_line intro_title_strong">
+                                 <strong>Portfolio.</strong>
+                              </p>
+                              <p class="intro_title_text_line intro_title_strong">
+                                 <strong>Aspiring developer.</strong>
+                              </p>
+                              <p class="intro_title_text_line">17-year-old</p>
+                              <p class="intro_title_text_line">IT-student,</p>
+                              <p class="intro_title_text_line">striving to</p>
+                              <p class="intro_title_text_line">innovate</p>
+                              <p class="intro_title_text_line">and develop both</p>
+                              <p class="intro_title_text_line intro_title_strong">
+                                 <strong>solutions</strong>
+                              </p>
+                              <p class="intro_title_text_line">to problems,</p>
+                              <p class="intro_title_text_line">and program</p>
+                              <p class="intro_title_text_line intro_title_strong">
+                                 <strong>for fun.</strong>
+                              </p>
+                           </header>
                         </article>
                      </div>
                   </div>
                </div>
             </section>
-            <nav id="nav">
-               <div class="nav_wrapper">
-                  <div class="nav_header">
-                     <p class="nav_header_name_first">filip</p>
-                     <div class="nav_header_info">
-                        <p class="nav_header_copyright">
-                           ©
-                           <span id="copyright_year">2024</span>
-                        </p>
-                        <p class="nav_header_name_last">ryan</p>
+            <section class="category" id="about">
+               <div class="container">
+                  <div class="cont">
+                     <div class="in_cont" id="in_cont_about">
+                        <article class="inner_col about_cont">
+                           <article class="about_main">
+                              <div class="about_main_col">
+                                 <p>I'm Filip,</p>
+                                 <p>
+                                    a
+                                    <span>Filipino-Norwegian</span>
+                                    with a passion for
+                                    <span>volleyball,</span>
+
+                                    <span>fitness,</span>
+                                    and
+                                    <span>programming.</span>
+                                 </p>
+                                 <p>
+                                    I focus on creating digital
+                                    <span>experiences,</span>
+                                    developing
+                                    <span>games,</span>
+                                    and
+                                    <span>software,</span>
+                                    bringing
+                                    <span>ideas</span>
+                                    to life through code.
+                                 </p>
+                                 <p>
+                                    Outside of
+                                    <span>programming,</span>
+                                    I spend time in the
+                                    <span>gym,</span>
+                                    on the
+                                    <span>volleyball court,</span>
+                                    and keeping up with the latest in
+                                    <span>technology.</span>
+                                 </p>
+                                 <p>
+                                    Welcome to my
+                                    <span>portfolio.</span>
+                                 </p>
+                              </div>
+                              <span class="section_tag marg_auto_left">[1]</span>
+                           </article>
+                           <aside class="about_aside">
+                              <div class="about_aside_col">
+                                 <p>
+                                    In
+                                    <span>2019,</span>
+                                    I started programming with
+                                    <a class="cursor_hoverable hvr_line" href="https://arcade.makecode.com">
+                                       Microsoft MakeCode Arcade,
+                                    </a>
+                                    building some simple games like a small
+                                    <span>dungeon crawler,</span>
+                                    and some other small
+                                    <span>rpg games.</span>
+                                    This period really sparked my interest in coding.
+                                 </p>
+                                 <p>
+                                    By
+                                    <span>2021,</span>
+                                    I had developed a passion for
+                                    <span>
+                                       game development and started working on small projects using the
+                                    </span>
+                                    <a class="cursor_hoverable hvr_line" href="https://godotengine.org">
+                                       godot engine,
+                                    </a>
+                                    diving deeper into developing interactive experiences and games.
+                                 </p>
+                                 <p>
+                                    In the summer of
+                                    <span>2022,</span>
+                                    I enrolled at
+                                    <span>
+                                       Kirkeparken videregående skole and chose computer science as my school
+                                       program.
+                                    </span>
+                                    In
+                                    <span>computer science,</span>
+                                    we focused on
+                                    <span>web development</span>
+                                    and built up both
+                                    <span>front-end</span>
+                                    and
+                                    <span>back-end</span>
+                                    skills.
+                                 </p>
+                                 <p>
+                                    In
+                                    <span>2024,</span>
+                                    I have delved deeper into programming, driven by my
+                                    <span>thirst for knowledge.</span>
+                                    This journey eventually led me to start learning
+                                    <span>C++.</span>
+                                    Currently, I am developing
+                                    <a class="cursor_hoverable" href="https://github.com/raincuhh/amanises">
+                                       my own compiler
+                                    </a>
+                                    from the ground up.
+                                 </p>
+                                 <p>
+                                    You can reach me at
+                                    <a
+                                       class="cursor_hoverable hvr_line"
+                                       href="mailto:filipryan.business@gmail.com"
+                                    >
+                                       filipryan.business@gmail.com,
+                                    </a>
+                                    or check out my repos on
+                                    <a class="cursor_hoverable hvr_line" href="https://github.com/raincuhh">
+                                       github.
+                                    </a>
+                                 </p>
+                              </div>
+                              <span class="section_tag marg_auto_left">[2]</span>
+                           </aside>
+                        </article>
                      </div>
                   </div>
                </div>
-            </nav>
-            <div class="page_scroll_bar"></div>
-            <div id="page_scroll_wrapper">
-               <section class="category" id="intro">
-                  <div class="container">
-                     <div class="cont">
-                        <div class="in_cont" id="in_cont_intro">
-                           <article class="inner_col intro_cont">
-                              <header class="intro_title">
-                                 <p class="intro_title_text_line intro_title_strong">
-                                    <strong>Portfolio.</strong>
-                                 </p>
-                                 <p class="intro_title_text_line intro_title_strong">
-                                    <strong>Aspiring developer.</strong>
-                                 </p>
-                                 <p class="intro_title_text_line">17-year-old</p>
-                                 <p class="intro_title_text_line">IT-student,</p>
-                                 <p class="intro_title_text_line">striving to</p>
-                                 <p class="intro_title_text_line">innovate</p>
-                                 <p class="intro_title_text_line">and develop both</p>
-                                 <p class="intro_title_text_line intro_title_strong">
-                                    <strong>solutions</strong>
-                                 </p>
-                                 <p class="intro_title_text_line">to problems,</p>
-                                 <p class="intro_title_text_line">and program</p>
-                                 <p class="intro_title_text_line intro_title_strong">
-                                    <strong>for fun.</strong>
-                                 </p>
-                              </header>
-                           </article>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-               <section class="category" id="about">
-                  <div class="container">
-                     <div class="cont">
-                        <div class="in_cont" id="in_cont_about">
-                           <article class="inner_col about_cont">
-                              <article class="about_main">
-                                 <div class="about_main_col">
-                                    <p>I'm Filip,</p>
-                                    <p>
-                                       a
-                                       <span>Filipino-Norwegian</span>
-                                       with a passion for
-                                       <span>volleyball,</span>
-
-                                       <span>fitness,</span>
-                                       and
-                                       <span>programming.</span>
-                                    </p>
-                                    <p>
-                                       I focus on creating digital
-                                       <span>experiences,</span>
-                                       developing
-                                       <span>games,</span>
-                                       and
-                                       <span>software,</span>
-                                       bringing
-                                       <span>ideas</span>
-                                       to life through code.
-                                    </p>
-                                    <p>
-                                       Outside of
-                                       <span>programming,</span>
-                                       I spend time in the
-                                       <span>gym,</span>
-                                       on the
-                                       <span>volleyball court,</span>
-                                       and keeping up with the latest in
-                                       <span>technology.</span>
-                                    </p>
-                                    <p>
-                                       Welcome to my
-                                       <span>portfolio.</span>
-                                    </p>
-                                 </div>
-                                 <span class="section_tag marg_auto_left">[1]</span>
-                              </article>
-                              <aside class="about_aside">
-                                 <div class="about_aside_col">
-                                    <p>
-                                       In
-                                       <span>2019,</span>
-                                       I started programming with
-                                       <a
-                                          class="cursor_hoverable hvr_line"
-                                          href="https://arcade.makecode.com"
-                                       >
-                                          Microsoft MakeCode Arcade,
-                                       </a>
-                                       building some simple games like a small
-                                       <span>dungeon crawler,</span>
-                                       and some other small
-                                       <span>rpg games.</span>
-                                       This period really sparked my interest in coding.
-                                    </p>
-                                    <p>
-                                       By
-                                       <span>2021,</span>
-                                       I had developed a passion for
-                                       <span>game development</span>
-                                       and started working on small projects using the
-                                       <a class="cursor_hoverable hvr_line" href="https://godotengine.org">
-                                          godot engine,
-                                       </a>
-                                       diving deeper into developing interactive experiences and games.
-                                    </p>
-                                    <p>
-                                       In the summer of
-                                       <span>2022,</span>
-                                       I enrolled at
-                                       <span>Kirkeparken videregående skole</span>
-                                       and chose
-                                       <span>computer science</span>
-                                       as my school program. In
-                                       <span>computer science,</span>
-                                       we focused on
-                                       <span>web development</span>
-                                       and built up both
-                                       <span>front-end</span>
-                                       and
-                                       <span>back-end</span>
-                                       skills.
-                                    </p>
-                                    <p>
-                                       In
-                                       <span>2024,</span>
-                                       I have delved deeper into programming, driven by my
-                                       <span>thirst for knowledge.</span>
-                                       This journey eventually led me to start learning
-                                       <span>C++.</span>
-                                       Currently, I am developing
-                                       <a
-                                          class="cursor_hoverable"
-                                          href="https://github.com/raincuhh/amanises"
-                                       >
-                                          my own compiler
-                                       </a>
-                                       from the ground up.
-                                    </p>
-                                    <p>
-                                       You can reach me at
-                                       <a
-                                          class="cursor_hoverable hvr_line"
-                                          href="mailto:filipryan.business@gmail.com"
-                                       >
-                                          filipryan.business@gmail.com,
-                                       </a>
-                                       or check out my repos on
-                                       <a
-                                          class="cursor_hoverable hvr_line"
-                                          href="https://github.com/raincuhh"
-                                       >
-                                          github.
-                                       </a>
-                                    </p>
-                                 </div>
-                                 <span class="section_tag marg_auto_left">[2]</span>
-                              </aside>
-                           </article>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-               <section class="category" id="expertises">
-                  <div class="container">
-                     <div class="cont">
-                        <div class="in_cont" id="in_cont_expertises">
-                           <article class="inner_col cv_cont">
-                              <header class="cv_title">
-                                 <p>
-                                    <span>My Expertises.</span>
-                                 </p>
-                              </header>
-                              <aside class="cv_beside">
-                                 <div class="beside_list_cont" id="beside_expertises">
-                                    <ul class="cv_list">
-                                       <li class="cv_item">
-                                          <p>
-                                             <span class="cursor_hoverable hvr_line">html (2022).</span>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <span class="cursor_hoverable hvr_line">css (2022).</span>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <span class="cursor_hoverable hvr_line">javascript (2022).</span>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <span class="cursor_hoverable hvr_line">typescript (2024).</span>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <span class="cursor_hoverable hvr_line">gdscript (2022).</span>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <span class="cursor_hoverable hvr_line">C++ (2024).</span>
-                                          </p>
-                                       </li>
-                                       <!--
+            </section>
+            <section class="category" id="expertises">
+               <div class="container">
+                  <div class="cont">
+                     <div class="in_cont" id="in_cont_expertises">
+                        <article class="inner_col cv_cont">
+                           <header class="cv_title">
+                              <p>
+                                 <span>My Expertises.</span>
+                              </p>
+                           </header>
+                           <aside class="cv_beside">
+                              <div class="beside_list_cont" id="beside_expertises">
+                                 <ul class="cv_list">
+                                    <li class="cv_item">
+                                       <p>
+                                          <span class="cursor_hoverable hvr_line">html (2022).</span>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <span class="cursor_hoverable hvr_line">css (2022).</span>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <span class="cursor_hoverable hvr_line">javascript (2022).</span>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <span class="cursor_hoverable hvr_line">typescript (2024).</span>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <span class="cursor_hoverable hvr_line">gdscript (2022).</span>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <span class="cursor_hoverable hvr_line">C++ (2024).</span>
+                                       </p>
+                                    </li>
+                                    <!--
                                        not yet haha, after i do the ir and codegen part in my compiler i can say i have learnt x86_64 nasm asm
                                        <li class="cv_item"></li>
                                           <p>
@@ -310,286 +299,282 @@
                                           </p>
                                        </li>
                                        -->
-                                    </ul>
-                                 </div>
-                              </aside>
-                           </article>
-                           <span class="section_tag">[1]</span>
-                        </div>
+                                 </ul>
+                              </div>
+                           </aside>
+                        </article>
+                        <span class="section_tag">[1]</span>
                      </div>
                   </div>
-               </section>
-               <section class="category" id="tools">
-                  <div class="container">
-                     <div class="cont">
-                        <div class="in_cont" id="in_cont_tools">
-                           <article class="inner_col cv_cont">
-                              <header class="cv_title">
-                                 <p>
-                                    <span>My Tools.</span>
-                                 </p>
-                              </header>
-                              <aside class="cv_beside">
-                                 <div class="beside_list_cont" id="beside_tools">
-                                    <ul class="cv_list">
-                                       <li class="cv_item">
-                                          <p>
-                                             <a
-                                                class="cursor_hoverable hvr_line"
-                                                href="https://godotengine.org"
-                                             >
-                                                godot engine (2022).
-                                             </a>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <a
-                                                class="cursor_hoverable hvr_line"
-                                                href="https://www.adobe.com/products/photoshop.html"
-                                             >
-                                                adobe photoshop (2023).
-                                             </a>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <a
-                                                class="cursor_hoverable hvr_line"
-                                                href="https://www.adobe.com/products/premiere.html"
-                                             >
-                                                adobe premiere pro (2023).
-                                             </a>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <a
-                                                class="cursor_hoverable hvr_line"
-                                                href="https://orama-interactive.itch.io/pixelorama"
-                                             >
-                                                pixelorama (2022).
-                                             </a>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <a
-                                                class="cursor_hoverable hvr_line"
-                                                href="https://www.aseprite.org"
-                                             >
-                                                aseprite (2024).
-                                             </a>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <a class="cursor_hoverable hvr_line" href="https://vitejs.dev">
-                                                vite.js (2024).
-                                             </a>
-                                          </p>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </aside>
-                           </article>
-                           <span class="section_tag">[2]</span>
-                        </div>
+               </div>
+            </section>
+            <section class="category" id="tools">
+               <div class="container">
+                  <div class="cont">
+                     <div class="in_cont" id="in_cont_tools">
+                        <article class="inner_col cv_cont">
+                           <header class="cv_title">
+                              <p>
+                                 <span>My Tools.</span>
+                              </p>
+                           </header>
+                           <aside class="cv_beside">
+                              <div class="beside_list_cont" id="beside_tools">
+                                 <ul class="cv_list">
+                                    <li class="cv_item">
+                                       <p>
+                                          <a class="cursor_hoverable hvr_line" href="https://godotengine.org">
+                                             godot engine (2022).
+                                          </a>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <a
+                                             class="cursor_hoverable hvr_line"
+                                             href="https://www.adobe.com/products/photoshop.html"
+                                          >
+                                             adobe photoshop (2023).
+                                          </a>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <a
+                                             class="cursor_hoverable hvr_line"
+                                             href="https://www.adobe.com/products/premiere.html"
+                                          >
+                                             adobe premiere pro (2023).
+                                          </a>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <a
+                                             class="cursor_hoverable hvr_line"
+                                             href="https://orama-interactive.itch.io/pixelorama"
+                                          >
+                                             pixelorama (2022).
+                                          </a>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <a
+                                             class="cursor_hoverable hvr_line"
+                                             href="https://www.aseprite.org"
+                                          >
+                                             aseprite (2024).
+                                          </a>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <a class="cursor_hoverable hvr_line" href="https://vitejs.dev">
+                                             vite.js (2024).
+                                          </a>
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </aside>
+                        </article>
+                        <span class="section_tag">[2]</span>
                      </div>
                   </div>
-               </section>
-               <section class="category" id="education">
-                  <div class="container">
-                     <div class="cont">
-                        <div class="in_cont" id="in_cont_education">
-                           <article class="inner_col cv_cont">
-                              <header class="cv_title">
-                                 <p>
-                                    <span>My Education</span>
-                                 </p>
-                              </header>
-                              <aside class="cv_beside">
-                                 <div class="beside_list_cont" id="beside_education">
-                                    <ul class="cv_list">
-                                       <li class="cv_item">
-                                          <p>
-                                             <span class="cursor_hoverable hvr_line" href="/">
-                                                <span>Åvangen Primary School</span>
-                                                (2013-2020)
-                                             </span>
-                                             <span class="arrow_ico"></span>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <span class="cursor_hoverable hvr_line" href="/">
-                                                <span>Nøkkeland Secondary School</span>
-                                                (2020-2023)
-                                             </span>
-                                             <span class="arrow_ico"></span>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <span class="cursor_hoverable hvr_line" href="/">
-                                                <span>Kirkeparken College</span>
-                                                (2023-present)
-                                             </span>
-                                             <span class="arrow_ico"></span>
-                                          </p>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </aside>
-                           </article>
-                           <span class="section_tag">[3]</span>
-                        </div>
+               </div>
+            </section>
+            <section class="category" id="education">
+               <div class="container">
+                  <div class="cont">
+                     <div class="in_cont" id="in_cont_education">
+                        <article class="inner_col cv_cont">
+                           <header class="cv_title">
+                              <p>
+                                 <span>My Education</span>
+                              </p>
+                           </header>
+                           <aside class="cv_beside">
+                              <div class="beside_list_cont" id="beside_education">
+                                 <ul class="cv_list">
+                                    <li class="cv_item">
+                                       <p>
+                                          <span class="cursor_hoverable hvr_line" href="/">
+                                             <span>Åvangen Primary School</span>
+                                             (2013-2020)
+                                          </span>
+                                          <span class="arrow_ico"></span>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <span class="cursor_hoverable hvr_line" href="/">
+                                             <span>Nøkkeland Secondary School</span>
+                                             (2020-2023)
+                                          </span>
+                                          <span class="arrow_ico"></span>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <span class="cursor_hoverable hvr_line" href="/">
+                                             <span>Kirkeparken College</span>
+                                             (2023-present)
+                                          </span>
+                                          <span class="arrow_ico"></span>
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </aside>
+                        </article>
+                        <span class="section_tag">[3]</span>
                      </div>
                   </div>
-               </section>
-               <section class="category" id="cv">
-                  <div class="container">
-                     <div class="cont">
-                        <div class="in_cont" id="in_cont_cv">
-                           <article class="inner_col cv_cont" id="cv_cont">
-                              <header class="cv_title">
-                                 <p>
-                                    <span>My Curriculum Vitae's.</span>
-                                 </p>
-                              </header>
-                              <aside class="cv_beside">
-                                 <div class="beside_list_cont" id="beside_cv">
-                                    <ul class="cv_list">
-                                       <li class="cv_item">
-                                          <p>
-                                             <a
-                                                class="cursor_hoverable hvr_line"
-                                                href="./assets/pdfs/Ryan-CV1.pdf"
-                                             >
-                                                cv (ver-1).
-                                             </a>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <a
-                                                class="cursor_hoverable hvr_line"
-                                                href="./assets/pdfs/Ryan-CV2.pdf"
-                                             >
-                                                cv (ver-2).
-                                             </a>
-                                          </p>
-                                       </li>
-                                       <li class="cv_item">
-                                          <p>
-                                             <a
-                                                class="cursor_hoverable hvr_line"
-                                                href="./assets/pdfs/Ryan-CV3.pdf"
-                                             >
-                                                cv (ver-3).
-                                             </a>
-                                          </p>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </aside>
-                           </article>
-                           <span class="section_tag">[4]</span>
-                        </div>
+               </div>
+            </section>
+            <section class="category" id="cv">
+               <div class="container">
+                  <div class="cont">
+                     <div class="in_cont" id="in_cont_cv">
+                        <article class="inner_col cv_cont" id="cv_cont">
+                           <header class="cv_title">
+                              <p>
+                                 <span>My Curriculum Vitae's.</span>
+                              </p>
+                           </header>
+                           <aside class="cv_beside">
+                              <div class="beside_list_cont" id="beside_cv">
+                                 <ul class="cv_list">
+                                    <li class="cv_item">
+                                       <p>
+                                          <a
+                                             class="cursor_hoverable hvr_line"
+                                             href="./assets/pdfs/Ryan-CV1.pdf"
+                                          >
+                                             cv (ver-1).
+                                          </a>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <a
+                                             class="cursor_hoverable hvr_line"
+                                             href="./assets/pdfs/Ryan-CV2.pdf"
+                                          >
+                                             cv (ver-2).
+                                          </a>
+                                       </p>
+                                    </li>
+                                    <li class="cv_item">
+                                       <p>
+                                          <a
+                                             class="cursor_hoverable hvr_line"
+                                             href="./assets/pdfs/Ryan-CV3.pdf"
+                                          >
+                                             cv (ver-3).
+                                          </a>
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </aside>
+                        </article>
+                        <span class="section_tag">[4]</span>
                      </div>
                   </div>
-               </section>
-               <section class="category" id="projects">
-                  <div class="container">
-                     <div class="cont">
-                        <div class="in_cont" id="in_cont_projects">
-                           <article class="inner_col projects_cont">projects TODODODODODOODOO</article>
-                        </div>
+               </div>
+            </section>
+            <section class="category" id="projects">
+               <div class="container">
+                  <div class="cont">
+                     <div class="in_cont" id="in_cont_projects">
+                        <article class="inner_col projects_cont">projects TODODODODODOODOO</article>
                      </div>
                   </div>
-               </section>
-               <section class="category" id="contact">
-                  <div class="container">
-                     <div class="cont">
-                        <div class="in_cont" id="in_cont_contact">
-                           <article class="inner_col contact_cont">
-                              <div class="contact_main">
-                                 <header class="contact_cta">
-                                    <div class="contact_cta_content">
-                                       <div class="contact_cta_content_inner">
-                                          <p>
-                                             <span>Are you,</span>
-                                          </p>
-                                          <p>
-                                             interested in
-                                             <span>discussing a project,</span>
-                                             <span>collaboration,</span>
-                                             or an
-                                             <span>idea?</span>
-                                             I'm open for exploring
-                                             <span>opportunities</span>
-                                             and hearing thoughts. Feel free to
-                                             <a
-                                                class="cursor_hoverable"
-                                                href="mailto:filipryan.business@gmail.com"
-                                             >
-                                                reach out.
-                                             </a>
-                                          </p>
-                                       </div>
-                                       <span class="section_tag marg_auto_left">[1]</span>
+               </div>
+            </section>
+            <section class="category" id="contact">
+               <div class="container">
+                  <div class="cont">
+                     <div class="in_cont" id="in_cont_contact">
+                        <article class="inner_col contact_cont">
+                           <div class="contact_main">
+                              <header class="contact_cta">
+                                 <div class="contact_cta_content">
+                                    <div class="contact_cta_content_inner">
+                                       <p>
+                                          <span>Are you,</span>
+                                       </p>
+                                       <p>
+                                          interested in
+                                          <span>discussing a project,</span>
+                                          <span>collaboration,</span>
+                                          or an
+                                          <span>idea?</span>
+                                          I'm open for exploring
+                                          <span>opportunities</span>
+                                          and hearing thoughts. Feel free to
+                                          <a
+                                             class="cursor_hoverable"
+                                             href="mailto:filipryan.business@gmail.com"
+                                          >
+                                             reach out.
+                                          </a>
+                                       </p>
                                     </div>
-                                 </header>
-                              </div>
-                              <div class="contact_footer">
-                                 <div class="contact_copyright">
-                                    <p>
-                                       <span>©2024 -</span>
-                                       <span class="copyright_year">2024</span>
-                                       <span>Filip Ryan.dev. - All Rights Reserved.</span>
-                                    </p>
+                                    <span class="section_tag marg_auto_left">[1]</span>
                                  </div>
-                                 <div class="contact_platforms">
-                                    <ul class="contact_platforms_list">
-                                       <li class="contact_platforms_item">
-                                          <p>
-                                             <a
-                                                class="cursor_hoverable hvr_line"
-                                                href="https://github.com/raincuhh"
-                                             >
-                                                github.
-                                             </a>
-                                          </p>
-                                       </li>
-                                       <li class="contact_platforms_item">
-                                          <p>
-                                             <a class="cursor_hoverable hvr_line" href="#">instagram.</a>
-                                          </p>
-                                       </li>
-                                       <li class="contact_platforms_item">
-                                          <p>
-                                             <a
-                                                class="cursor_hoverable hvr_line"
-                                                href="https://www.linkedin.com/in/filip-ryan-93677532b/"
-                                             >
-                                                linkedin.
-                                             </a>
-                                          </p>
-                                       </li>
-                                       <li class="contact_platforms_item">
-                                          <p>
-                                             <a class="cursor_hoverable hvr_line" href="#">privacy policy</a>
-                                          </p>
-                                       </li>
-                                    </ul>
-                                 </div>
+                              </header>
+                           </div>
+                           <div class="contact_footer">
+                              <div class="contact_copyright">
+                                 <p>
+                                    <span>©2024 -</span>
+                                    <span class="copyright_year">2024</span>
+                                    <span>Filip Ryan.dev. - All Rights Reserved.</span>
+                                 </p>
                               </div>
-                           </article>
-                        </div>
+                              <div class="contact_platforms">
+                                 <ul class="contact_platforms_list">
+                                    <li class="contact_platforms_item">
+                                       <p>
+                                          <a
+                                             class="cursor_hoverable hvr_line"
+                                             href="https://github.com/raincuhh"
+                                          >
+                                             github.
+                                          </a>
+                                       </p>
+                                    </li>
+                                    <li class="contact_platforms_item">
+                                       <p>
+                                          <a class="cursor_hoverable hvr_line" href="#">instagram.</a>
+                                       </p>
+                                    </li>
+                                    <li class="contact_platforms_item">
+                                       <p>
+                                          <a
+                                             class="cursor_hoverable hvr_line"
+                                             href="https://www.linkedin.com/in/filip-ryan-93677532b/"
+                                          >
+                                             linkedin.
+                                          </a>
+                                       </p>
+                                    </li>
+                                    <li class="contact_platforms_item">
+                                       <p>
+                                          <a class="cursor_hoverable hvr_line" href="#">privacy policy</a>
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </article>
                      </div>
                   </div>
-               </section>
-            </div>
+               </div>
+            </section>
          </div>
       </main>
    </body>

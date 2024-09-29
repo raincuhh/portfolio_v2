@@ -137,4 +137,8 @@ function change_lang(lang: Languages = Languages.English) {
    // contact
 }
 
-export { loc, Languages, change_lang };
+function set_default_language(): void {
+   change_lang(Languages.English);
+}
+
+export { loc, Languages, change_lang, set_default_language };

@@ -8,11 +8,12 @@ gsap.registerPlugin(ScrollTrigger, Observer);
 function add_smooth_scroll() {
    let html: HTMLElement = document.documentElement;
    let body: HTMLElement = document.body;
+
    let req_id: any = null;
 
    var scroller = {
-      target: document.querySelector("#page_scroll_wrapper"),
-      ease: 0.05,
+      target: document.querySelector("#page_scroll"),
+      ease: 0.025,
       end_y: 0,
       y: 0,
       resize_req: 1,
@@ -24,14 +25,16 @@ function add_smooth_scroll() {
       force3D: true,
    });
 
-   window.addEventListener("load", on_page_load);
+   //window.addEventListener("load", on_page_load);
 
    function on_page_load() {
       update_scroller();
       window.focus();
       window.addEventListener("resize", on_page_resize);
       window.addEventListener("scroll", on_page_scroll);
+      console.log("added on_page_load event listeners resize and scroll");
    }
+   on_page_load();
 
    function update_scroller() {
       let resized: boolean = scroller.resize_req > 0;
@@ -42,12 +45,12 @@ function add_smooth_scroll() {
          scroller.resize_req = 0;
       }
 
-      let scroll_y: number = window.screenY || html.scrollTop || body.scrollTop || 0;
+      let scroll_y: number = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
 
       scroller.end_y = scroll_y;
       scroller.y += (scroll_y - scroller.y) * scroller.ease;
 
-      if (Math.abs(scroll_y - scroller.y) < 0.05 || resized) {
+      if (Math.abs(scroll_y - scroller.y) < 0.025 || resized) {
          scroller.y = scroll_y;
          scroller.scroll_req = 0;
       }
@@ -55,6 +58,8 @@ function add_smooth_scroll() {
       gsap.to(scroller.target, {
          y: -scroller.y,
       });
+
+      req_id = scroller.scroll_req > 0 ? requestAnimationFrame(update_scroller) : null;
    }
 
    function on_page_resize() {
@@ -62,7 +67,7 @@ function add_smooth_scroll() {
       if (!req_id) {
          req_id = requestAnimationFrame(update_scroller);
       }
-      console.log(scroller.resize_req);
+      console.log("resize");
    }
 
    function on_page_scroll() {
@@ -70,47 +75,28 @@ function add_smooth_scroll() {
       if (!req_id) {
          req_id = requestAnimationFrame(update_scroller);
       }
+      console.log("scrolling");
    }
 }
 
-export { add_smooth_scroll };
+function lock_scrolling(val: boolean = true) {
+   let locked: string;
 
-/*
-TweenLite.set(scroller.target, {
-  rotation: 0.01,
-  force3D: true
-});
+   switch (val) {
+      case true:
+         locked = "hidden";
+         break;
+      case false:
+         locked = "unset";
+         break;
+   }
 
-
-function updateScroller() {
-  var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
-
-  scroller.endY = scrollY;
-  scroller.y += (scrollY - scroller.y) * scroller.ease;
-
-  if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
-    scroller.y = scrollY;
-    scroller.scrollRequest = 0;
-  }
-
-  TweenLite.set(scroller.target, {
-    y: -scroller.y
-  });
-
-  requestId = scroller.scrollRequest > 0 ? requestAnimationFrame(updateScroller) : null;
+   let body: Element | null = document.querySelector(".page");
+   if (body) {
+      body.setAttribute("style", `overflow: ${locked}`);
+   } else {
+      console.error("body element not found");
+   }
 }
 
-function onScroll() {
-  scroller.scrollRequest++;
-  if (!requestId) {
-    requestId = requestAnimationFrame(updateScroller);
-  }
-}
-
-function onResize() {
-  scroller.resizeRequest++;
-  if (!requestId) {
-    requestId = requestAnimationFrame(updateScroller);
-  }
-}
-*/
+export { add_smooth_scroll, lock_scrolling };

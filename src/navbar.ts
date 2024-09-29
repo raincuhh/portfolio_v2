@@ -89,6 +89,10 @@ function add_nav_menu_header_listeners() {
    }
 }
 
+function set_default_nav_menu_visiblity() {
+   show_single_nav_menu_category(current_nav_menu_state);
+}
+
 export {
    nav_menu_state,
    current_nav_menu_state,
@@ -96,4 +100,5 @@ export {
    set_display,
    toggle_nav_menu_list_options,
    add_nav_menu_header_listeners,
+   set_default_nav_menu_visiblity,
 };
