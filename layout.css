@@ -208,6 +208,8 @@ a {
 .intro_title {
    display: flex;
    flex-direction: column;
+   /*gap: clamp(0rem, 8vw, 2rem);*/
+   gap: 0.75rem;
 }
 
 .intro_title_strong {
@@ -222,7 +224,8 @@ a {
    font-size: clamp(1.8rem, 9.4vw, 6rem);
    line-height: clamp(1.8rem, 9.4vw, 6rem);
    font-weight: 600;
-   transform: translate(-100%, 300%);
+   transform: translate(-150%, 600%);
+   opacity: 0;
 }
 
 .intro_title_text_line:nth
@@ -407,6 +410,7 @@ a {
    }
 
    .about_cont {
+      display: flex;
       flex-direction: row;
    }
 

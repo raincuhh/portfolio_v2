@@ -2,17 +2,52 @@ import { add_smooth_scroll } from "./page_scroll.js";
 import { gsap } from "gsap";
 
 function page_intro_cat() {
-   let main = gsap.timeline();
+   let main_tl: GSAPTimeline = gsap.timeline();
    let intro_title = gsap.utils.selector(document.querySelector(".intro_title"));
+   let intro_title_el = document.querySelector(".intro_title");
 
-   //intro_title(".intro_title_text_line").forEach();https://gsap.com/community/forums/topic/28787-stagger-timelines/
+   intro_title(".intro_title_text_line").forEach((e, i) => {
+      console.log("el", e);
+
+      const el_tl: GSAPTimeline = gsap.timeline();
+      el_tl.to(e, {
+         x: "0%",
+         opacity: 1,
+         duration: 1.8,
+         ease: "power1.inOut",
+      });
+      el_tl.to(
+         e,
+         {
+            y: "0%",
+            duration: 1.8,
+            ease: "power1.inOut",
+         },
+         "-=1.0"
+      );
+
+      main_tl.add(el_tl, i * 0.1);
+   });
+   /*
+   main_tl.to(
+      intro_title_el,
+      {
+         gap: "0rem",
+         duration: 1.4,
+         ease: "power3.inOut",
+      },
+      "-=3.0"
+   );
+   */
 }
 
 function conclude_loader() {
    const loader: Element | null = document.querySelector("#loader");
    loader.setAttribute("hidden", "");
+   page_intro_cat();
 
    //lock_scrolling(false);
+
    add_smooth_scroll();
 }
 
