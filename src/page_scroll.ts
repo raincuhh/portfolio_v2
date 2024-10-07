@@ -13,7 +13,7 @@ function add_smooth_scroll() {
 
    var scroller = {
       target: document.querySelector("#page_scroll"),
-      ease: 0.025,
+      ease: 0.09,
       end_y: 0,
       y: 0,
       resize_req: 1,
@@ -50,7 +50,7 @@ function add_smooth_scroll() {
       scroller.end_y = scroll_y;
       scroller.y += (scroll_y - scroller.y) * scroller.ease;
 
-      if (Math.abs(scroll_y - scroller.y) < 0.025 || resized) {
+      if (Math.abs(scroll_y - scroller.y) < 0.09 || resized) {
          scroller.y = scroll_y;
          scroller.scroll_req = 0;
       }

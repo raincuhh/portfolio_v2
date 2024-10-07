@@ -5,11 +5,10 @@
    "main": "index.js",
    "type": "module",
    "scripts": {
-      "dev": "vite",
-      "build": "vite build",
+      "dev": "npm run tsc && vite",
       "serve": "vite preview",
       "tsc": "tsc",
-      "predeploy": "npm run build",
+      "build:vite": "npm run build",
       "deploy": "gh-pages -d dist -a"
    },
    "keywords": [],

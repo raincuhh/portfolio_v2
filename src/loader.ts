@@ -1,4 +1,12 @@
 import { add_smooth_scroll } from "./page_scroll.js";
+import { gsap } from "gsap";
+
+function page_intro_cat() {
+   let main = gsap.timeline();
+   let intro_title = gsap.utils.selector(document.querySelector(".intro_title"));
+
+   //intro_title(".intro_title_text_line").forEach();https://gsap.com/community/forums/topic/28787-stagger-timelines/
+}
 
 function conclude_loader() {
    const loader: Element | null = document.querySelector("#loader");
