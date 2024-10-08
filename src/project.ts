@@ -1,4 +1,4 @@
-import { get_id, create_el } from "./helper.js";
+import { get_id, create } from "./helper.js";
 
 enum project_langs {
    HTML = 0,
@@ -85,7 +85,7 @@ class project_manager {
       let project_section_parent: HTMLElement | null = get_id(_project_section_parent);
 
       // parent appending
-      let proj_parent: HTMLElement = create_el("div");
+      let proj_parent: HTMLElement = create("div");
       proj_parent.setAttribute("class", "project");
       proj_parent.setAttribute("id", "project_id_" + finished_project_template.id.toString());
       project_section_parent?.appendChild(proj_parent);

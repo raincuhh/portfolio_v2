@@ -1,4 +1,4 @@
-import { get_id, get_query, create_el, set_el_text_content, set_page_title } from "./helper.js";
+import { get_id, query, create, set_el_text_content, set_page_title } from "./helper.js";
 
 enum Languages {
    English = 0,
@@ -53,30 +53,28 @@ function change_lang(lang: Languages = Languages.English) {
    }
 
    // preload
-   let preload_name: Element | null = get_query("#in_cont_preload .preload_title .preload_name strong");
+   let preload_name: Element | null = query("#in_cont_preload .preload_title .preload_name strong");
    if (preload_name) loc(preload_name.textContent, lang);
 
-   let preload_article: Element | null = get_query("#in_cont_preload .preload_article p");
+   let preload_article: Element | null = query("#in_cont_preload .preload_article p");
    if (preload_article) loc(preload_article.textContent, lang);
 
-   let preload_copyright: Element | null = get_query("#in_cont_preload .preload_copyright p");
+   let preload_copyright: Element | null = query("#in_cont_preload .preload_copyright p");
    if (preload_copyright) loc(preload_copyright.textContent, lang);
 
-   let preload_wip: Element | null = get_query("#in_cont_preload .preload_wip p");
+   let preload_wip: Element | null = query("#in_cont_preload .preload_wip p");
    if (preload_wip) loc(preload_wip.textContent, lang);
 
    // nav
-   let nav_header_name_first: Element | null = get_query(
-      "#nav .nav_wrapper .nav_header .nav_header_name_first"
-   );
+   let nav_header_name_first: Element | null = query("#nav .nav_wrapper .nav_header .nav_header_name_first");
    if (nav_header_name_first) loc(nav_header_name_first.textContent, lang);
 
-   let nav_header_name_last: Element | null = get_query(
+   let nav_header_name_last: Element | null = query(
       "#nav .nav_wrapper .nav_header .nav_header_info .nav_header_name_last"
    );
    if (nav_header_name_last) loc(nav_header_name_last.textContent, lang);
 
-   let nav_menu_list: Element | null = get_query("#nav .nav_wrapper .nav_menu_list");
+   let nav_menu_list: Element | null = query("#nav .nav_wrapper .nav_menu_list");
    if (nav_menu_list) {
       const items: HTMLCollection | null = nav_menu_list.children;
       if (!items) return;
@@ -92,12 +90,12 @@ function change_lang(lang: Languages = Languages.English) {
 
    // scroll nav
    /*
-   let scroll_nav_header: Element | null = get_query(
+   let scroll_nav_header: Element | null = query(
       "#scroll_nav .scroll_nav_wrapper .scroll_nav_list ._scroll_nav_header"
    );
    if (scroll_nav_header) loc(scroll_nav_header.textContent, lang);
 
-   let scroll_nav_list: Element | null = get_query("#scroll_nav .scroll_nav_wrapper .scroll_nav_list");
+   let scroll_nav_list: Element | null = query("#scroll_nav .scroll_nav_wrapper .scroll_nav_list");
    if (scroll_nav_list) {
       const children: HTMLCollection | null = scroll_nav_list.children;
       if (!children) return;
@@ -112,7 +110,7 @@ function change_lang(lang: Languages = Languages.English) {
    */
 
    // intro
-   let intro_title_text_line_list = get_query("#in_cont_intro");
+   let intro_title_text_line_list = query("#in_cont_intro");
    if (intro_title_text_line_list) {
       const children: HTMLCollection | null = intro_title_text_line_list.children;
       if (!children) return;

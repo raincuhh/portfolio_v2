@@ -1,21 +1,38 @@
 import { add_smooth_scroll } from "./page_scroll.js";
 import { gsap } from "gsap";
 
+function apply_blur(e: Element, val: number) {
+   gsap.to(e, {
+      filter: `blur(${val}rem)`,
+   });
+}
+
 function page_intro_cat() {
    let main_tl: GSAPTimeline = gsap.timeline();
    let intro_title = gsap.utils.selector(document.querySelector(".intro_title"));
-   let intro_title_el = document.querySelector(".intro_title");
 
    intro_title(".intro_title_text_line").forEach((e, i) => {
-      console.log("el", e);
+      let blur_val: { a: number } = { a: 1 };
+      gsap.to(blur_val, {
+         a: 0,
+         duration: 2.4,
+         onUpdate: () => {
+            apply_blur(e, blur_val.a);
+         },
+      });
 
       const el_tl: GSAPTimeline = gsap.timeline();
-      el_tl.to(e, {
-         x: "0%",
-         opacity: 1,
-         duration: 1.8,
-         ease: "power1.inOut",
-      });
+      el_tl.to(
+         e,
+         {
+            x: "0%",
+            opacity: 1,
+            filter: "blur(0rem)",
+            duration: 2.4,
+            ease: "power1.inOut",
+         },
+         "-=1.0" // 0.0
+      );
       el_tl.to(
          e,
          {
@@ -23,30 +40,16 @@ function page_intro_cat() {
             duration: 1.8,
             ease: "power1.inOut",
          },
-         "-=1.0"
+         "-=0.9" // 0.9
       );
-
-      main_tl.add(el_tl, i * 0.1);
+      main_tl.add(el_tl, i * 0.08);
    });
-   /*
-   main_tl.to(
-      intro_title_el,
-      {
-         gap: "0rem",
-         duration: 1.4,
-         ease: "power3.inOut",
-      },
-      "-=3.0"
-   );
-   */
 }
 
 function conclude_loader() {
    const loader: Element | null = document.querySelector("#loader");
    loader.setAttribute("hidden", "");
    page_intro_cat();
-
-   //lock_scrolling(false);
 
    add_smooth_scroll();
 }
@@ -73,7 +76,7 @@ function simulate_page_loading() {
          // after simulation is finished, conclude loading
          setTimeout(() => {
             conclude_loader();
-         }, 200);
+         }, 250);
       } else {
          let random_num: number = Math.floor(Math.random() * 3);
          height += random_num + 1;

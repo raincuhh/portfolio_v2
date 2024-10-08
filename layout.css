@@ -209,7 +209,7 @@ a {
    display: flex;
    flex-direction: column;
    /*gap: clamp(0rem, 8vw, 2rem);*/
-   gap: 0.75rem;
+   gap: 0.5rem;
 }
 
 .intro_title_strong {
@@ -224,11 +224,10 @@ a {
    font-size: clamp(1.8rem, 9.4vw, 6rem);
    line-height: clamp(1.8rem, 9.4vw, 6rem);
    font-weight: 600;
-   transform: translate(-150%, 600%);
+   transform: translate(150%, 600%);
    opacity: 0;
+   filter: blur(1rem);
 }
-
-.intro_title_text_line:nth
 
 /* about */
 .about_cont {
@@ -459,11 +458,12 @@ a {
 @media (min-width: 948px) {
    .loader_progress_bar {
       position: absolute;
-      bottom: 5rem;
+      /*bottom: 5rem;*/
       left: -5rem;
 
       width: 1px;
-      height: 125px;
+      height: calc(100% - 5rem);
+      top: 0;
 
       background-color: var(--s-primary-color);
    }

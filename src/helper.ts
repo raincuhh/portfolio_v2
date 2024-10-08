@@ -2,11 +2,11 @@ function get_id(id: string) {
    return document.getElementById(id);
 }
 
-function get_query(what: string) {
+function query(what: string) {
    return document.querySelector(what);
 }
 
-function create_el(el: string) {
+function create(el: string) {
    return document.createElement(el);
 }
 
@@ -35,12 +35,4 @@ function uppercaseify(str: string) {
    return str;
 }
 
-export {
-   get_id,
-   get_query,
-   create_el,
-   set_el_text_content,
-   set_page_title,
-   uppercaseify,
-   uppercaseify_string,
-};
+export { get_id, query, create, set_el_text_content, set_page_title, uppercaseify, uppercaseify_string };

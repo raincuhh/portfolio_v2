@@ -1,4 +1,4 @@
-import { get_id, get_query } from "./helper.js";
+import { get_id, query } from "./helper.js";
 
 // nav
 enum nav_menu_state {
@@ -10,7 +10,7 @@ enum nav_menu_state {
 let current_nav_menu_state: nav_menu_state = nav_menu_state.contact;
 
 function show_single_nav_menu_category(_nav_menu_state: nav_menu_state): void {
-   const nav_menu_list: Element | null = get_query("#nav .nav_wrapper .nav_menu .nav_menu_list");
+   const nav_menu_list: Element | null = query("#nav .nav_wrapper .nav_menu .nav_menu_list");
    if (!nav_menu_list) return;
 
    const nav_menu_categories: Record<string, Element | null> = {
@@ -34,7 +34,7 @@ function set_display(elements: Record<string, Element | null>, display_style: st
 }
 
 function toggle_nav_menu_list_options(visible: boolean): void {
-   const nav_menu_list: Element | null = get_query("#nav .nav_wrapper .nav_menu .nav_menu_list");
+   const nav_menu_list: Element | null = query("#nav .nav_wrapper .nav_menu .nav_menu_list");
    if (!nav_menu_list) return;
 
    const nav_menu_categories: Record<string, Element | null> = {
