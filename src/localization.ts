@@ -1,11 +1,11 @@
 import { get_id, query, create, set_el_text_content, set_page_title } from "./helper.js";
 
-enum Languages {
+export enum Languages {
    English = 0,
    Norwegian,
 }
 
-const translations: {
+export const translations: {
    [key: string]: {
       [key in Languages]: string;
    };
@@ -32,7 +32,7 @@ const translations: {
    },
 };
 
-function loc(str: string | null, lang: Languages): string {
+export function loc(str: string | null, lang: Languages): string {
    if (!str) return "";
    const translation = translations[str];
    if (translation) {
@@ -41,7 +41,7 @@ function loc(str: string | null, lang: Languages): string {
    return str;
 }
 
-function change_lang(lang: Languages = Languages.English) {
+export function change_lang(lang: Languages = Languages.English) {
    // misc
 
    // section tag
@@ -135,8 +135,6 @@ function change_lang(lang: Languages = Languages.English) {
    // contact
 }
 
-function set_default_language(): void {
+export function set_default_language(): void {
    change_lang(Languages.English);
 }
-
-export { loc, Languages, change_lang, set_default_language };
