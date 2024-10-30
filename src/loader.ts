@@ -1,4 +1,5 @@
 import { add_smooth_scroll } from "./page_scroll.js";
+import { init_projects } from "./project.js";
 import { gsap } from "gsap";
 
 function apply_blur(e: Element, val: number) {
@@ -15,7 +16,7 @@ function page_intro_cat() {
       let blur_val: { a: number } = { a: 1 };
       gsap.to(blur_val, {
          a: 0,
-         duration: 2.4,
+         duration: 2,
          onUpdate: () => {
             apply_blur(e, blur_val.a);
          },
@@ -28,10 +29,10 @@ function page_intro_cat() {
             x: "0%",
             opacity: 1,
             filter: "blur(0rem)",
-            duration: 2.4,
+            duration: 2,
             ease: "power1.inOut",
          },
-         "-=1.0" // 0.0
+         "-=1.5" // 0.0
       );
       el_tl.to(
          e,
@@ -40,9 +41,9 @@ function page_intro_cat() {
             duration: 1.8,
             ease: "power1.inOut",
          },
-         "-=0.9" // 0.9
+         "-=1.2" // 0.9
       );
-      main_tl.add(el_tl, i * 0.08);
+      main_tl.add(el_tl, i * 0.06);
    });
 }
 
@@ -50,11 +51,27 @@ function conclude_loader() {
    const loader: Element | null = document.querySelector("#loader");
    loader.setAttribute("hidden", "");
    page_intro_cat();
+   init_projects();
+   //add_smooth_scroll();
 
-   add_smooth_scroll();
+   function trigger_resize_event() {
+      window.dispatchEvent(new Event("resize"));
+   }
+
+   function trigger_reflow() {
+      document.body.style.height = document.body.scrollHeight + 1 + "px";
+      console.log("dwada");
+
+      setTimeout(() => {
+         document.body.style.height = "";
+      }, 50);
+   }
+
+   trigger_reflow();
+   trigger_resize_event();
 }
 
-function simulate_page_loading() {
+function init() {
    const progress_bar: Element | null = document.querySelector(".loader_progress_bar");
    const loader_progress_bar_content: Element | null = document.querySelector(
       ".loader_progress_bar_progress"
@@ -86,4 +103,4 @@ function simulate_page_loading() {
    }, 17.5);
 }
 
-export { simulate_page_loading };
+export { init };
