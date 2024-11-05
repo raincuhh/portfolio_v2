@@ -78,18 +78,45 @@ function get_project_info_html_construct(template: project_template, i: number):
 
    // tools
    let project_info_aside_tools_div: Element = create("div");
-   project_info_aside_tools_div.textContent = "tools: ";
    project_info_aside_tools_div.setAttribute("class", "project_info_aside_tool_list");
    project_info_aside_div?.appendChild(project_info_aside_tools_div);
+
+   let tools_label_div: Element = create("span");
+   tools_label_div.textContent = "tools: ";
+   project_info_aside_tools_div?.appendChild(tools_label_div);
 
    template.tools.forEach((tool: tools) => {
       let tool_div: Element = create("span");
       let str_of_tool: string = tool_to_str(tool);
-      tool_div.textContent = "";
+      console.log(str_of_tool);
+      tool_div.textContent = ` ${str_of_tool}`;
       project_info_aside_tools_div?.appendChild(tool_div);
    });
 
-   // info desc
+   // year
+   let project_info_aside_year_div: Element = create("div");
+   project_info_aside_year_div.setAttribute("class", "project_info_aside_year");
+   project_info_aside_div?.appendChild(project_info_aside_year_div);
+
+   let year_label_div: Element = create("span");
+   year_label_div.textContent = "year: ";
+   project_info_aside_year_div?.appendChild(year_label_div);
+
+   let year_div: Element = create("span");
+   year_div.textContent = template.date;
+   project_info_aside_year_div?.appendChild(year_div);
+
+   // repo
+   let project_info_aside_repo_div: Element = create("div");
+   project_info_aside_repo_div.setAttribute("class", "project_info_aside_repo");
+   project_info_aside_div?.appendChild(project_info_aside_repo_div);
+
+   let repo_div: Element = create("a");
+   repo_div.setAttribute("href", template.repo_path);
+   repo_div.textContent = "repository";
+   project_info_aside_repo_div?.appendChild(repo_div);
+
+   // desc
    let project_info_desc_div: Element = create("div");
    project_info_desc_div.setAttribute("class", "project_info_desc");
    project_info_container_div?.appendChild(project_info_desc_div);

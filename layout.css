@@ -344,6 +344,16 @@ a {
 
 .project_img {
    width: 100%;
+   margin-bottom: var(--s-marg-em-m);
+}
+
+.project_info {
+   display: flex;
+   flex-direction: column;
+   margin-top: var(--s-marg-em-m);
+}
+
+.project_info_aside {
 }
 
 /* contact */
@@ -422,6 +432,13 @@ a {
 @media (min-width: 320px) {
    .about_main_col p:last-child {
       margin-bottom: var(--s-marg-em-xxl);
+   }
+}
+
+@media (min-width: 567px) {
+   .project_info {
+      flex-direction: row;
+      justify-content: space-between;
    }
 }
 
