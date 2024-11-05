@@ -155,13 +155,6 @@ a {
    display: none;
 }
 
-.nav_page_theme_btn {
-   width: 9px;
-   height: 9px;
-   border-radius: 50%;
-   background-color: var(--s-tertiary-color);
-}
-
 .container {
    margin: 0 auto;
    max-width: var(--s-max-width);
@@ -226,8 +219,8 @@ a {
 
 .intro_title_text_line {
    z-index: 70;
-   font-size: clamp(1.8rem, 9.4vw, 6rem);
-   line-height: clamp(1.8rem, 9.4vw, 6rem);
+   font-size: clamp(1.6rem, 9.4vw, 6rem);
+   line-height: clamp(1.6rem, 9.4vw, 6rem);
    font-weight: 600;
    transform: translate(150%, 600%);
    opacity: 0;
@@ -351,9 +344,39 @@ a {
    display: flex;
    flex-direction: column;
    margin-top: var(--s-marg-em-m);
+   gap: var(--s-marg-em-m);
 }
 
-.project_info_aside {
+.project_info_aside_tool_list {
+   max-width: 100%;
+}
+
+.project_info_aside_tool_list span:first-child {
+   color: var(--s-tertiary-color);
+}
+
+.project_info_aside_year span:first-child {
+   color: var(--s-tertiary-color);
+}
+
+.project_info_aside_repo {
+   padding-top: var(--s-marg-em-s);
+   a {
+      text-decoration: underline;
+      transition: var(--s-transition-hover-base);
+   }
+
+   a:hover {
+      color: var(--s-tertiary-color);
+   }
+}
+
+.project_info_desc {
+   max-width: 30rem;
+   display: flex;
+   flex-direction: column;
+   gap: var(--s-marg-em-m);
+   margin-right: clamp(0rem, 0.4vw, 5rem);
 }
 
 /* contact */

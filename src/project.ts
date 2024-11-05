@@ -198,25 +198,36 @@ function new_project(
 function create_projects() {
    new_project(
       '"joy"ride',
-      "../assets/project_previews/joyride_preview.png",
+      "/assets/project_previews/joyride_preview.png",
       "https://github.com/raincuhh/JoyRide",
-      ["test test test line 1", "test test test line 2"],
+      [
+         "Joyride is a submission towards the ung I trafikken, deathtrip campaign. The deathtrip campaign is a Norwegian nationwide project about creating attitude-campaigns against drunk driving",
+         "I decided to group up with a few friends who decided to make an interactive short film; while I decided to make an endless runner, jetpack joyride inspired game (Also coincidentally the name of the game.)",
+      ],
       [tools.GDScript, tools.Godot, tools.Photoshop, tools.Pixelorama],
       "2023"
    );
+
    new_project(
       "the passage",
-      "../assets/project_previews/thepassage_preview.jpg",
+      "/assets/project_previews/thepassage_preview.jpg",
       "https://github.com/raincuhh/the-passage",
-      ["test test test line 1", "test test test line 2"],
-      [tools.GDScript, tools.Godot],
+      [
+         "So we had a school project where we had to make a game, any sort of game, in javascript. I decided making a textbased roguelike seemed fun and did so.",
+         "beware though i did not follow conventions on this, it was just a project i used to learn javascript basically so there is some weird (understatement) code in there.",
+      ],
+      [tools.HTML, tools.CSS, tools.JS],
       "2023"
    );
+
    new_project(
       "amanises",
-      "../assets/project_previews/amanises_preview.jpg",
+      "/assets/project_previews/amanises_preview.jpg",
       "https://github.com/raincuhh/amanises",
-      ["test test test line 1", "test test test line 2"],
+      [
+         "Yeah so C++ is pretty fun, i had been interested in how compilers worked ever since i began programming in compiled languages, and in general, low level stuff. I had no clue how they worked and i wanted to find out. thus the most logical decision is to make my own.",
+         "Currently a wip.",
+      ],
       [tools.CPP],
       "2024"
    );
