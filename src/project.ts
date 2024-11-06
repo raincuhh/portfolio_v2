@@ -202,7 +202,7 @@ function create_projects() {
       "https://github.com/raincuhh/JoyRide",
       [
          "Joyride is a submission towards the ung I trafikken, deathtrip campaign. The deathtrip campaign is a Norwegian nationwide project about creating attitude-campaigns against drunk driving",
-         "I decided to group up with a few friends who decided to make an interactive short film; while I decided to make an endless runner, jetpack joyride inspired game (Also coincidentally the name of the game.)",
+         "On the campaign, our group made a short movie and a game. I decided to work on an endless runner, jetpack joyride inspired. I got some ideas from friends and mainly Inderdeep Singh throughout the project.",
       ],
       [tools.GDScript, tools.Godot, tools.Photoshop, tools.Pixelorama],
       "2023"
