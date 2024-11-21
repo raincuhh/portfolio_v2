@@ -214,23 +214,23 @@ function create_projects() {
       "https://github.com/raincuhh/the-passage",
       [
          "So we had a school project where we had to make a game, any sort of game, in javascript. I decided making a textbased roguelike seemed fun and did so.",
-         "beware though i did not follow conventions on this, it was just a project i used to learn javascript basically so there is some weird (understatement) code in there.",
+         "It was just a project i used to learn javascript basically so there is some weird (understatement) code in there probably.",
       ],
       [tools.HTML, tools.CSS, tools.JS],
       "2023"
    );
 
-   new_project(
-      "amanises",
-      "/assets/project_previews/amanises_preview.JPG",
-      "https://github.com/raincuhh/amanises",
-      [
-         "Yeah so C++ is pretty fun, i had been interested in how compilers worked ever since i began programming in compiled languages, and in general, low level stuff. I had no clue how they worked and i wanted to find out. thus the most logical decision is to make my own.",
-         "Currently a wip.",
-      ],
-      [tools.CPP],
-      "2024"
-   );
+   // new_project(
+   //    "amanises",
+   //    "/assets/project_previews/amanises_preview.JPG",
+   //    "https://github.com/raincuhh/amanises",
+   //    [
+   //       "Yeah so C++ is pretty fun, i had been interested in how compilers worked ever since i began programming in compiled languages, and in general, low level stuff. I had no clue how they worked and i wanted to find out. thus the most logical decision is to make my own.",
+   //       "Currently a wip.",
+   //    ],
+   //    [tools.CPP],
+   //    "2024"
+   // );
 }
 
 export function init_projects() {
