@@ -46,15 +46,15 @@ function tool_to_str(tool: tools): string {
       case tools.C:
          return "C";
       case tools.CSS:
-         return "Css";
+         return "CSS";
       case tools.CPP:
          return "C++";
       case tools.GDScript:
-         return "GdScript";
+         return "GDScript";
       case tools.Godot:
          return "Godot";
       case tools.HTML:
-         return "Html";
+         return "HTML";
       case tools.JS:
          return "JavaScript";
       case tools.Photoshop:
