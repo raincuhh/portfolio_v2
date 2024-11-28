@@ -2,7 +2,7 @@
 
 ## Brief
 
-This document outlines the steps for setting up and running the second edition of the portfolio project, currently a work in progress.
+This document outlines the steps for setting up the development environment for the project.
 
 ## Installing Dependencies
 
